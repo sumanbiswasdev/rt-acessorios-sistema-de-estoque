@@ -20,20 +20,27 @@
 
             <div class="bg-gray-100 border-[0.1rem] border-gray-200 rounded-lg shadow-md p-5 max-w-lg mx-auto mt-5 mb-5">
 
-                <div class="flex flex-col justify-start items-left space-y-2 mb-3">
+                <div class="flex flex-col justify-start items-left space-y-2">
                     <p class="text-lg font-medium">Entrar no Sistema</p>
                     <p class="text-sm font-light text-slate-600">Digite suas credenciais para acessar o sistema</p>
                 </div>
 
-                
-                <div>
-                    <label class="my-3" for="#">Usuário <span>*</span></label>
-
+                <div class="mt-6 flex flex-col space-y-3">
+                    <label class="text-lg font-medium" for="">Usuários<span class="text-red-500 text-sm">*</span></label>
+                    <input class="px-5 py-3 text-md font-medium bg-gray-300
+                     text-slate-600 rounded-lg border-[0.1rem] border-gray-300
+                      focus:border-blue-500 focus:outline-none"
+                       type="text" name="" id="" placeholder="Digite seu usuário">
                 </div>
 
-                
+                <div class="mt-6 flex flex-col space-y-3">
+                    <label class="text-lg font-medium" for="">Senha<span class="text-red-500 text-sm">*</span></label>
+                    <input class="px-5 py-3 text-md font-medium bg-gray-300
+                     text-slate-600 rounded-lg border-[0.1rem] border-gray-300
+                      focus:border-blue-500 focus:outline-none"
+                       type="text" name="" id="" placeholder="Digite sua senha">
+                </div>
 
-               
                 <div class="text-center mt-5 w-full hover:bg-slate-800
                  bg-slate-700 rounded-lg p-3 hover:transition-all hover:duration-300 
                  hover:ease-in-out cursor-pointer">
@@ -45,8 +52,7 @@
         </div>
 
     
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <script src="https://kit.fontawesome.com/9898c47017.js" crossorigin="anonymous"></script>
     <script src="/script.js"></script>
 </body>
