@@ -7,52 +7,88 @@
     <link rel="shortcut icon" href="/logo/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/src/output.css">
 </head>
-<body class="font-poppins">
+<body class="font-poppins bg-gray-50">
 
-        <div class="container mx-auto">
-            <div class="flex flex-col justify-center items-center mt-20">
-                <div class="mb-5 flex items-center justify-center bg-blue-700 rounded-full h-20 w-20">
-                    <img src="/logo/logo.png" alt="">
+        <main>
+
+            <!-- RT ACESSÓRIOS -->
+            <section>
+                <div class="container mx-auto">
+
+                    <div class="bg-blue-600 h-20 w-20 p-1 mt-20 flex justify-center items-center mx-auto rounded-full">
+                        <img class="w-28" src="/logo/logo.png" alt="">
+                    </div>
+
+                    <div class="text-center space-y-2 mt-8">
+                        <h1 class="text-3xl font-bold text-gray-800">RT ACESSÓRIOS</h1>
+                        <p class="text-lg text-gray-700 font-light">Sistema de Gerenciamento de Estoque</p>
+                    </div>
+
                 </div>
-                <h1 class="mb-2 text-3xl font-bold text-slate-800">RT ACESSÓRIOS</h1>
-                <h3 class="font-medium text-slate-600">Sistema de Gerenciamento de Estoque</h3>
-            </div>
+            </section>
 
-            <div class="bg-gray-100 border-[0.1rem] border-gray-200 rounded-lg shadow-md p-5 max-w-lg mx-auto mt-5 mb-5">
+            <!-- Entrar no Sitema -->
+            <section>
 
-                <div class="flex flex-col justify-start items-left space-y-2">
-                    <p class="text-lg font-medium">Entrar no Sistema</p>
-                    <p class="text-sm font-light text-slate-600">Digite suas credenciais para acessar o sistema</p>
-                </div>
+                <div class="bg-white p-8 mt-8 rounded-2xl shadow-md border-[0.1rem] border-slate-300 
+                w-[400px] md:w-[500px] lg:w-[600px] mx-auto">
 
-                <div class="mt-6 flex flex-col space-y-3">
-                    <label class="text-lg font-medium" for="">Usuários<span class="text-red-500 text-sm">*</span></label>
-                    <input class="px-5 py-3 text-md font-medium bg-gray-300
-                     text-slate-600 rounded-lg border-[0.1rem] border-gray-300
-                      focus:border-blue-500 focus:outline-none"
-                       type="text" name="" id="" placeholder="Digite seu usuário">
-                </div>
+                    <div class="space-y-1">
+                        <p class="text-lg font-medium">Entrar no Sistema</p>
+                        <p class="text-sm md:text-lg font-light text-gray-700">Digite suas credenciais para acessar o sistema</p>
+                    </div>
 
-                <div class="mt-6 flex flex-col space-y-3">
-                    <label class="text-lg font-medium" for="">Senha<span class="text-red-500 text-sm">*</span></label>
-                    <input class="px-5 py-3 text-md font-medium bg-gray-300
-                     text-slate-600 rounded-lg border-[0.1rem] border-gray-300
-                      focus:border-blue-500 focus:outline-none"
-                       type="text" name="" id="" placeholder="Digite sua senha">
-                </div>
+                    <div class="flex flex-col gap-6 w-full">
 
-                <div class="text-center mt-5 w-full hover:bg-slate-800
-                 bg-slate-700 rounded-lg p-3 hover:transition-all hover:duration-300 
-                 hover:ease-in-out cursor-pointer">
-                    <a class="text-white" href="">
-                        <button class="cursor-pointer">Entrar</button></a>
-                </div>
+                        <!-- Usuário -->
+                        <div class="flex flex-col gap-2 mt-5">
+                            
+                            <label for="username" class="text-lg font-medium">Usuário</label>
 
-            </div>
-        </div>
+                            <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <!-- User Icon (Heroicons) -->
+                                <ion-icon name="person-outline"></ion-icon>
+                            </div>
+                            <input type="text" id="username" class="w-full pl-10 pr-3 py-2 bg-gray-100 border-transparent rounded-md text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Digite seu usuário">
+                            </div>
+                        </div>
 
+                        <!-- Senha -->
+                        <div class="flex flex-col gap-2 ">
+                            
+                            <label for="username" class="text-lg font-medium">Senha</label>
+
+                            <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <!-- User Icon (Heroicons) -->
+                                <ion-icon name="lock-closed-outline"></ion-icon>
+                            </div>
+                            <input type="text" id="username" class="w-full pl-10 pr-3 py-2 bg-gray-100 border-transparent rounded-md text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Digite seu senha">
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-700 text-center py-2 rounded-lg hover:bg-slate-800 
+                        hover:transition-all ease-in-out duration-300 cursor-pointer">
+                            <a class="text-white cursor-pointer" href="#">
+                                <button class="cursor-pointer">Entrar</button></a>
+                        </div>
+
+                        <!-- Todos os direitos reservados -->
+                         <div class="md:flex md:justify-center md:items-center gap-1">
+                            <p class="text-center text-sm">© 2026 RT Acessórios.</p>
+                            <p class="text-center text-sm">Todos os direitos reservados.</p>
+                         </div>
+                    </div>
+            </section>
+
+
+
+
+        </main>
     
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/9898c47017.js" crossorigin="anonymous"></script>
     <script src="/script.js"></script>
 </body>
