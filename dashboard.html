@@ -138,95 +138,197 @@
                         <p class="md:text-xl md:font-bold lg:text-3xl">Dashboard</p>
                         <p class="text-slate-600 md:text-lg md:font-light lg:text-xl">Visão geral do sistema de estoque</p>
                     </div>
+                </div>
 
-                   <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-                    
-                     <!-- grid -->
-                    <div class="grid md:grid-cols-2 lg:grid-cols-2 md:gap-7 lg:gap-6">
-                        
+                <!--  -->
+
+                <div class="absolute top-0 md:ml-52 md:mt-24 lg:ml-72 lg:mt-24 px-2">
+
+                    <!-- grid atual -->
+                    <div class="grid lg:grid-cols-2 gap-3">
+
+                        <!-- grid 1 -->
+                        <div class="grid lg:grid-cols-2 gap-3">
+
                         <!-- Total de Produtos -->
-                        <div class="bg-white md:w-60 lg:w-96 border-[.1rem] border-gray-200 px-8 py-7 rounded-2xl mt-8">
+                        <div class="bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] py-5 px-5">
+
                             <div class="flex justify-between items-center">
-                                <p class="md:text-[14px] lg:text-[18px] text-slate-500 font-medium">Total de Produtos</p>
-                                <ion-icon class="text-blue-600 text-lg font-medium" name="cube-outline"></ion-icon>
-
+                                <p>Total de Produtos</p>
+                                <ion-icon name="cube-outline"></ion-icon>
                             </div>
-                            <div class="flex flex-col mt-8">
-                                <p class="text-2xl font-bold text-slate-800">235</p>
-                                <p class="text-lg text-slate-600 text-[14px]">Produtos cadastrados</p>
 
+                            <div class="mt-5">
+                                <p>235</p>
+                                <p>Produtos cadastrados</p>
                             </div>
+
                         </div>
 
                         <!-- Estoque Total -->
-                        <div class="bg-white md:w-60 lg:w-96 border-[.1rem] border-gray-200 px-8 py-7 rounded-2xl mt-8">
+                        <div class="bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] py-5 px-5">
+
                             <div class="flex justify-between items-center">
-                                <p class="md:text-[14px] lg:text-[18px] text-slate-500 font-medium">Estoque Total</p>
-                                <ion-icon class="text-green-600 text-lg font-medium" name="repeat-outline"></ion-icon>
-
+                                <p>Estoque Total</p>
+                                <ion-icon name="cube-outline"></ion-icon>
                             </div>
-                            <div class="flex flex-col mt-8">
-                                <p class="text-2xl font-bold text-slate-800">23500</p>
-                                <p class="text-lg text-slate-600 text-[14px]">Unidades em estoque</p>
 
+                            <div class="mt-5">
+                                <p>23500</p>
+                                <p>Unidades em estoque</p>
                             </div>
+
                         </div>
 
                         <!-- Movimentações (Últimos 7 dias) -->
-                        <div class="grid md:grid-cols-2 lg:grid-cols-1 lg:col-span-2">
-                        <div class="bg-white border-[.1rem] border-gray-200 px-8 py-7 rounded-2xl">
-                            <p class="md:text-[14px] lg:text-[18px] text-slate-500 font-medium mb-5">Movimentações (Últimos 7 dias)</p>
-
-                            <div class="bg-green-50 flex justify-between items-center px-5 py-3 rounded-lg">
-
-                                <div class="flex justify-center items-center gap-5">
-                                    <div class="bg-green-600 flex flex-col p-1 rounded-full">
-                                        <ion-icon class="text-xl text-white" name="arrow-up-outline"></ion-icon>
-                                    </div>
-                                    <div>
-                                        <p class="text-[18px] font-medium">Entradas</p>
-                                        <p class="text-[15px] font-light">Compras/Reposições</p>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <p class="text-3xl font-semibold text-green-600">0</p>
-                                </div>
-
+                        <div class="grid col-span-2 bg-white w-full rounded-lg border-gray-200 border-[0.1rem] p-5">
+                            <div class="flex justify-between items-center">
+                                <p>Movimentações (Últimos 7 dias)</p>
                             </div>
 
-                            <!-- Saídas -->
-                            <div class="bg-red-50 flex justify-between items-center px-5 py-3 rounded-lg mt-5">
+                            <div class="mt-5 space-y-3">
+                                <div class="bg-green-50 rounded-lg p-5">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="flex justify-center items-center bg-green-600 rounded-full p-2">
+                                                <ion-icon class="text-xl text-white" name="caret-up-outline"></ion-icon>
+                                            </div>
 
-                                <div class="flex justify-center items-center gap-5">
-                                    <div class="bg-red-600 flex flex-col p-1 rounded-full">
-                                        <ion-icon class="text-xl text-white" name="arrow-down-outline"></ion-icon>
+                                            <div class="flex flex-col">
+                                                <p>Entradas</p>
+                                                <p>Compras/Reposições</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <p>0</p>
+                                        </div>
+
                                     </div>
-                                    <div>
-                                        <p class="text-[18px] font-medium">Saídas</p>
-                                        <p class="text-[15px] font-light">Vendas/Perdas</p>
-                                    </div>
+
                                 </div>
 
-                                <div>
-                                    <p class="text-3xl font-semibold text-red-600">0</p>
-                                </div>
+                                <div class="bg-red-50 rounded-lg p-5">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="flex justify-center items-center bg-green-600 rounded-full p-2">
+                                                <ion-icon class="text-xl text-white" name="caret-up-outline"></ion-icon>
+                                            </div>
 
+                                            <div class="flex flex-col">
+                                                <p>Entradas</p>
+                                                <p>Compras/Reposições</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <p>0</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
                             </div>
 
-                            
                         </div>
 
                         </div>
 
+
+                        <!-- grid 2 -->
+                        <div class="grid lg:grid-cols-2 gap-3">
+
+                        <!-- Total de Produtos -->
+                        <div class="md:hidden lg:block bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] py-5 px-5">
+
+                            <div class="flex justify-between items-center">
+                                <p>Total de Produtos</p>
+                                <ion-icon name="cube-outline"></ion-icon>
+                            </div>
+
+                            <div class="mt-5">
+                                <p>235</p>
+                                <p>Produtos cadastrados</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Estoque Total -->
+                        <div class="md:hidden lg:block bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] py-5 px-5">
+
+                            <div class="flex justify-between items-center">
+                                <p>Estoque Total</p>
+                                <ion-icon name="cube-outline"></ion-icon>
+                            </div>
+
+                            <div class="mt-5">
+                                <p>23500</p>
+                                <p>Unidades em estoque</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Movimentações (Últimos 7 dias) -->
+                        <div class="md:hidden lg:block grid col-span-2 bg-white w-full rounded-lg border-gray-200 border-[0.1rem] p-5">
+                            <div class="flex justify-between items-center">
+                                <p>Movimentações (Últimos 7 dias)</p>
+                            </div>
+
+                            <div class="mt-5">
+                                <div class="bg-green-50 rounded-lg p-5">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="flex justify-center items-center bg-green-600 rounded-full p-2">
+                                                <ion-icon class="text-xl text-white" name="caret-up-outline"></ion-icon>
+                                            </div>
+
+                                            <div class="flex flex-col">
+                                                <p>Entradas</p>
+                                                <p>Compras/Reposições</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div>
+                                            <p>0</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="bg-green-50 rounded-lg p-5">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="flex justify-center items-center bg-green-600 rounded-full p-2">
+                                                <ion-icon class="text-xl text-white" name="caret-up-outline"></ion-icon>
+                                            </div>
+
+                                            <div class="flex flex-col">
+                                                <p>Entradas</p>
+                                                <p>Compras/Reposições</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div>
+                                            <p>0</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        </div>
+
+                        
+
+                        </div>
                     </div>
 
-                   </div>
-                    
-                
                 </div>
-
-            
             </section>
 
         </main>
@@ -237,3 +339,4 @@
     <script src="/script.js"></script>
 </body>
 </html>
+
