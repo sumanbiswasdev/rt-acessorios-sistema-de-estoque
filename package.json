@@ -13,17 +13,3 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.2.2",
     "tailwindcss": "^4.2.2"
-<<<<<<< HEAD
-  }
-=======
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sumanbiswasdev/rt-acessorios-sistema-de-estoque.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sumanbiswasdev/rt-acessorios-sistema-de-estoque/issues"
-  },
-  "homepage": "https://github.com/sumanbiswasdev/rt-acessorios-sistema-de-estoque#readme"
->>>>>>> 7e9ecd84506c5132a469492ebbeef7d4e3e044d3
-}
