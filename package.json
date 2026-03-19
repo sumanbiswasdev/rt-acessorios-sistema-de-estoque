@@ -6,10 +6,20 @@
   "scripts": {
     "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumanbiswasdev/rt-acessorios-sistema-de-estoque.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sumanbiswasdev/rt-acessorios-sistema-de-estoque/issues"
+  },
+  "homepage": "https://github.com/sumanbiswasdev/rt-acessorios-sistema-de-estoque#readme",
   "dependencies": {
     "@tailwindcss/cli": "^4.2.2",
     "tailwindcss": "^4.2.2"
+  }
+}
