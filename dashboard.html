@@ -155,260 +155,135 @@
                     </div>
                 </div>
 
-                <!--  -->
-
                 <div class="absolute top-0 md:ml-52 md:mt-24 lg:ml-72 lg:mt-28 px-2">
-
-                    <!-- grid atual -->
-                    <div class="grid lg:grid-cols-2 md: gap-2 lg:gap-3">
-
-                        <!-- grid 1 -->
-                        <div class="grid lg:grid-cols-2 md: gap-2 lg:gap-3">
-
+                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        
                         <!-- Total de Produtos -->
-                        <div class="bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] md:py-3 lg:py-5 px-5">
-
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-7 px-5">
                             <div class="flex justify-between items-center">
-                                <p class="text-[14px] font-medium text-gray-500">Total de Produtos</p>
-                                <i class="text-lg text-blue-600 fa-solid fa-box"></i>
+                                <p class="text-sm font-medium text-gray-500">Total de Produtos</p>
+                                <i class="text-blue-600 fa-solid fa-box"></i>       
                             </div>
+                            
+                            <div class="flex flex-col mt-8">
+                                <p class="text-2xl text-black font-bold">235</p>
+                                <p class="text-xs font-medium text-gray-500">Produtos cadastrados</p>
 
-                            <div class="mt-10">
-                                <p class="text-2xl font-bold">235</p>
-                                <p class="text-[13px] text-sm mt-2 text-gray-500">Produtos cadastrados</p>
                             </div>
-
                         </div>
 
                         <!-- Estoque Total -->
-                        <div class="bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] md:py-3 lg:py-5 px-5">
-
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-7 px-5">
                             <div class="flex justify-between items-center">
-                                <p class="text-[14px] font-medium text-gray-500">Estoque Total</p>
-                                <i class="text-lg text-green-600 fa-solid fa-arrow-trend-up"></i>
+                                <p class="text-sm font-medium text-gray-500">Estoque Total</p>
+                                <i class="text-green-600 fa-solid fa-arrow-trend-up"></i>    
+         
                             </div>
+                            
+                            <div class="flex flex-col mt-8">
+                                <p class="text-2xl text-black font-bold">23500</p>
+                                <p class="text-xs font-medium text-gray-500">Unidades em estoque</p>
 
-                            <div class="mt-10">
-                                <p class="text-2xl font-bold">23500</p>
-                                <p class="text-[13px] text-sm mt-2 text-gray-500">Unidades em estoque</p>
                             </div>
-
                         </div>
 
                         <!-- Valor Total -->
-                        <div class="lg:hidden bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] md:py-3 lg:py-5 px-5">
-
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-7 px-5">
                             <div class="flex justify-between items-center">
-                                <p class="text-[14px] font-medium text-gray-500">Valor Total</p>
-                                <i class="text-lg text-blue-600 fa-solid fa-box"></i>
+                                <p class="text-sm font-medium text-gray-500">Valor Total</p>
+                                <i class="text-green-600 fa-solid fa-dollar-sign"></i>     
                             </div>
+                            
+                            <div class="flex flex-col mt-8">
+                                <p class="text-2xl text-black font-bold">R$ 572.550,00</p>
+                                <p class="text-xs font-medium text-gray-500">Valor do inventário</p>
 
-                            <div class="mt-10">
-                                <p class="text-2xl font-bold">R$ 572.550,00</p>
-                                <p class="text-[13px] text-sm mt-2 text-gray-500">Valor do inventário</p>
                             </div>
-
                         </div>
 
                         <!-- Alertas de Estoque -->
-                        <div class="lg:hidden bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] md:py-3 lg:py-5 px-5">
-
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-7 px-5">
                             <div class="flex justify-between items-center">
-                                <p class="text-[14px] font-medium text-gray-500">Alertas de Estoque</p>
-                                <i class="text-lg text-green-600 fa-solid fa-arrow-trend-up"></i>
+                                <p class="text-sm font-medium text-gray-500">Alertas de Estoque</p>
+                                <i class="text-red-600 fa-solid fa-circle-exclamation"></i>       
                             </div>
+                            
+                            <div class="flex flex-col mt-8">
+                                <p class="text-2xl text-black font-bold">0</p>
+                                <p class="text-xs font-medium text-gray-500">Produtos abaixo do mínimo</p>
 
-                            <div class="mt-10">
-                                <p class="text-2xl font-bold text-red-600">10</p>
-                                <p class="text-[13px] text-sm mt-2 text-gray-500">Produtos abaixo do mínimo</p>
                             </div>
-
-                        </div>
-
-                        <!-- Movimentações (Últimos 7 dias) -->
-                        <div class="grid col-span-2 bg-white w-full rounded-lg border-gray-200 border-[0.1rem] p-5">
-                            <div class="flex justify-between items-center">
-                                <p>Movimentações (Últimos 7 dias)</p>
-                            </div>
-
-                            <div class="mt-5 space-y-3">
-                                <div class="bg-green-50 rounded-lg p-5">
-                                    <div class="flex justify-between items-center">
-                                        <div class="flex items-center space-x-3">
-                                            <div class="flex justify-center items-center bg-green-600 rounded-full p-2">
-                                                <ion-icon class="text-xl text-white" name="caret-up-outline"></ion-icon>
-                                            </div>
-
-                                            <div class="flex flex-col">
-                                                <p class="text-[18px] font-medium">Entradas</p>
-                                                <p class="text-[14px] text-gray-500 font-light">Compras/Reposições</p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <p class="text-3xl font-bold text-green-600">0</p>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="bg-red-50 rounded-lg p-5">
-                                    <div class="flex justify-between items-center">
-                                        <div class="flex items-center space-x-3">
-                                            <div class="flex justify-center items-center bg-red-600 rounded-full p-2">
-                                                <ion-icon class="text-xl text-white" name="caret-up-outline"></ion-icon>
-                                            </div>
-
-                                            <div class="flex flex-col">
-                                                <p class="text-[18px] font-medium">Saídas</p>
-                                                <p class="text-[14px] text-gray-500 font-light">Vendas/Perdas</p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <p class="text-3xl font-bold text-red-600">0</p>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-
                         </div>
 
 
-                        <!-- grid 2 -->
-                        <div class="grid lg:grid-cols-2 gap-3">
-
-                        <!-- Total de Produtos -->
-                        <div class="lg:hidden md:hidden bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] py-5 px-5">
-
-                            <div class="flex justify-between items-center">
-                                <p class="text-[14px] font-medium text-gray-500">Total de Produtos</p>
-                                <i class="text-lg text-blue-600 fa-solid fa-box"></i>
-                            </div>
-
-                            <div class="mt-10">
-                                <p class="text-2xl font-bold">235</p>
-                                <p class="text-[13px] text-sm mt-2 text-gray-500">Produtos cadastrados</p>
-                            </div>
-
-                        </div>
-
-                        <!-- Estoque Total -->
-                        <div class="lg:hidden md:hidden bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] py-5 px-5">
-
-                            <div class="flex justify-between items-center">
-                                <p class="text-[14px] font-medium text-gray-500">Estoque Total</p>
-                                <i class="text-lg text-green-600 fa-solid fa-arrow-trend-up"></i>
-                            </div>
-
-                            <div class="mt-10">
-                                <p class="text-2xl font-bold">23500</p>
-                                <p class="text-[13px] text-sm mt-2 text-gray-500">Unidades em estoque</p>
-                            </div>
-
-                        </div>
-                        
-                        <!-- Valor Total -->
-                        <div class="lg:block md:hidden bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] py-5 px-5">
-
-                            <div class="flex justify-between items-center">
-                                <p class="text-[14px] font-medium text-gray-500">Valor Total</p>
-                                <i class="text-lg text-blue-600 fa-solid fa-box"></i>
-                            </div>
-
-                            <div class="mt-10">
-                                <p class="text-2xl font-bold">R$ 572.550,00</p>
-                                <p class="text-[13px] text-sm mt-2 text-gray-500">Valor do inventário</p>
-                            </div>
-
-                        </div>
-
-                        <!-- Alertas de Estoque -->
-                        <div class="lg:block md:hidden bg-white md:w-64 lg:w-96 rounded-lg border-gray-200 border-[0.1rem] py-5 px-5">
-
-                            <div class="flex justify-between items-center">
-                                <p class="text-[14px] font-medium text-gray-500">Alertas de Estoque</p>
-                                <i class="text-lg text-green-600 fa-solid fa-arrow-trend-up"></i>
-                            </div>
-
-                            <div class="mt-10">
-                                <p class="text-2xl font-bold text-red-600">10</p>
-                                <p class="text-[13px] text-sm mt-2 text-gray-500">Produtos abaixo do mínimo</p>
-                            </div>
-
-                        </div>
-
-                        <!-- Movimentações (Últimos 7 dias) -->
-                        <div class="grid col-span-2 bg-white w-full rounded-lg border-gray-200 border-[0.1rem] p-5">
-                            <div class="flex justify-between items-center">
-                                <p>Movimentações (Últimos 7 dias)</p>
-                            </div>
-
-                            <div class="mt-5 space-y-3">
-                                <div class="bg-green-50 rounded-lg p-5">
-                                    <div class="flex justify-between items-center">
-                                        <div class="flex items-center space-x-3">
-                                            <div class="flex justify-center items-center bg-green-600 rounded-full p-2">
-                                                <ion-icon class="text-xl text-white" name="caret-up-outline"></ion-icon>
-                                            </div>
-
-                                            <div class="flex flex-col">
-                                                <p class="text-[18px] font-medium">Entradas</p>
-                                                <p class="text-[14px] text-gray-500 font-light">Compras/Reposições</p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <p class="text-3xl font-bold text-green-600">0</p>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="bg-red-50 rounded-lg p-5">
-                                    <div class="flex justify-between items-center">
-                                        <div class="flex items-center space-x-3">
-                                            <div class="flex justify-center items-center bg-red-600 rounded-full p-2">
-                                                <ion-icon class="text-xl text-white" name="caret-up-outline"></ion-icon>
-                                            </div>
-
-                                            <div class="flex flex-col">
-                                                <p class="text-[18px] font-medium">Saídas</p>
-                                                <p class="text-[14px] text-gray-500 font-light">Vendas/Perdas</p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <p class="text-3xl font-bold text-red-600">0</p>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        </div>
-
-                        </div>
-
-                        
-
-                        </div>
                     </div>
 
+                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-1 lg:grid-cols-2 mt-6 gap-6">
+
+                        <!-- Movimentações (Últimos 7 dias) -->
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 p-5">
+                            <div>
+                                <p class="text-lg font-medium">Movimentações (Últimos 7 dias)</p>     
+                            </div>
+                            
+                            <!-- Entradas / Compras/Reposições -->
+                            <div class="flex bg-green-50 p-5 rounded-lg justify-between items-center mt-5">
+                                <div class="flex items-center gap-5">
+                                    <div class="bg-green-600 rounded-full flex items-center justify-center w-12 h-12 p-5">
+                                        <i class="text-white font-medium fa-solid fa-arrow-up"></i>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="text-lg font-medium">Entradas</p>
+                                        <p class="text-md font-light">Compras/Reposições</p>
+                                    </div>
+
+                                </div>
+
+                                <div>
+                                    <p class="text-2xl text-green-600 font-bold">0</p>
+                                </div>
+                            </div>
+
+                            <!-- Saídas / Vendas/Perdas -->
+                            <div class="flex bg-red-50 p-5 rounded-lg justify-between items-center mt-5">
+                                <div class="flex items-center gap-5">
+                                    <div class="bg-red-600 rounded-full flex items-center justify-center w-12 h-12 p-5">
+                                        <i class="text-white font-medium fa-solid fa-arrow-up"></i>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="text-lg font-medium">Saídas</p>
+                                        <p class="text-md font-light">Vendas/Perdas</p>
+                                    </div>
+
+                                </div>
+
+                                <div>
+                                    <p class="text-2xl text-red-600 font-bold">0</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Gráfico de Movimentações -->
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 p-5">
+                            <div>
+                                <p class="text-lg font-medium">Gráfico de Movimentações</p>     
+                            </div>
+                            
+                            <div class="sm:w-md lg:w-2xl">
+                                <canvas id="inventoryChart"></canvas>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
+
             </section>
 
         </main>
-    
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/9898c47017.js" crossorigin="anonymous"></script>
