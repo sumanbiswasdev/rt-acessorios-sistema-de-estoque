@@ -158,10 +158,10 @@
 
                 <div class="absolute top-0 md:ml-52 md:mt-24 lg:ml-72 lg:mt-28 px-2">
                     
-                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-">
                         
                         <!-- Total de Produtos -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-7 px-5">
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-5 px-5">
                             <div class="flex justify-between items-center">
                                 <p class="text-sm font-medium text-gray-500">Total de Produtos</p>
                                 <i class="text-blue-600 fa-solid fa-box"></i>       
@@ -175,7 +175,7 @@
                         </div>
 
                         <!-- Estoque Total -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-7 px-5">
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-5 px-5">
                             <div class="flex justify-between items-center">
                                 <p class="text-sm font-medium text-gray-500">Estoque Total</p>
                                 <i class="text-green-600 fa-solid fa-arrow-trend-up"></i>    
@@ -190,7 +190,7 @@
                         </div>
 
                         <!-- Valor Total -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-7 px-5">
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-5 px-5">
                             <div class="flex justify-between items-center">
                                 <p class="text-sm font-medium text-gray-500">Valor Total</p>
                                 <i class="text-green-600 fa-solid fa-dollar-sign"></i>     
@@ -204,7 +204,7 @@
                         </div>
 
                         <!-- Alertas de Estoque -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-7 px-5">
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-5 px-5">
                             <div class="flex justify-between items-center">
                                 <p class="text-sm font-medium text-gray-500">Alertas de Estoque</p>
                                 <i class="text-red-600 fa-solid fa-circle-exclamation"></i>       
@@ -220,18 +220,18 @@
 
                     </div>
 
-                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-1 lg:grid-cols-2 mt-6 gap-6">
+                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-1 lg:grid-cols-2 gap-2">
 
                         <!-- Movimentações (Últimos 7 dias) -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 p-5">
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 mt-2 px-5 py-5">
                             <div>
-                                <p class="text-lg font-medium">Movimentações (Últimos 7 dias)</p>     
+                                <p class="text-md font-medium mb-3 lg:mb-9">Movimentações (Últimos 7 dias)</p>     
                             </div>
                             
                             <!-- Entradas / Compras/Reposições -->
-                            <div class="flex bg-green-50 p-5 rounded-lg justify-between items-center mt-10">
+                            <div class="flex bg-green-50 p-5 rounded-lg justify-between items-center lg:mb-5">
                                 <div class="flex items-center gap-5">
-                                    <div class="bg-green-600 rounded-full flex items-center justify-center w-12 h-12 p-5">
+                                    <div class="bg-green-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
                                         <i class="text-white font-medium fa-solid fa-arrow-up"></i>
                                     </div>
                                     <div class="flex flex-col">
@@ -247,9 +247,9 @@
                             </div>
 
                             <!-- Saídas / Vendas/Perdas -->
-                            <div class="flex bg-red-50 p-5 rounded-lg justify-between items-center mt-10">
+                            <div class="flex bg-red-50 p-5 rounded-lg justify-between items-center lg:mb-5">
                                 <div class="flex items-center gap-5">
-                                    <div class="bg-red-600 rounded-full flex items-center justify-center w-12 h-12 p-5">
+                                    <div class="bg-red-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
                                         <i class="text-white font-medium fa-solid fa-arrow-up"></i>
                                     </div>
                                     <div class="flex flex-col">
@@ -267,12 +267,12 @@
                         </div>
 
                         <!-- Gráfico de Movimentações -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 p-5">
+                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 mt-2 px-5 py-5">
                             <div>
-                                <p class="text-lg font-medium">Gráfico de Movimentações</p>     
+                                <p class="text-md font-medium mb-3 lg:mb-9">Gráfico de Movimentações</p>     
                             </div>
                             
-                            <div class="sm:w-md lg:w-2xl">
+                            <div class="sm:w-md lg:w-3xl px-5">
                                 <canvas id="inventoryChart"></canvas>
                             </div>
                         </div>
