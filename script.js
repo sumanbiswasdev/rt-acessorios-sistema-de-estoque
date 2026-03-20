@@ -10,14 +10,14 @@ new Chart(ctx, {
 
     datasets: [
       {
-        label: 'Stock In',
+        label: 'Estoque de entrada',
         data: [10, 20, 15, 30, 25],
         borderColor: 'green',
         backgroundColor: 'green',
         tension: 0.4
       },
       {
-        label: 'Stock Out',
+        label: 'Estoque de saída',
         data: [5, 15, 10, 20, 18],
         borderColor: 'red',
         backgroundColor: 'red',

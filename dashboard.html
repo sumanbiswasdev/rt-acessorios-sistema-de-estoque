@@ -15,7 +15,7 @@
 
                 <!-- Painel / Sistema de Estoque -->
             <div class="bg-white md:w-48 lg:w-64 h-screen border-gray-300 border-r-[0.1rem] drop-shadow-sm">
-                        <div class="bg-white md:w-48 md:h-40 lg:w-64 lg:h-40 border-gray-300 border-b-[0.1rem] border-r-[0.1rem]">
+                        <div class="bg-white md:w-48 md:h-36 lg:w-64 lg:h-40 border-gray-300 border-b-[0.1rem] border-r-[0.1rem]">
                             <div class="flex flex-col justify-center items-start mx-auto px-8 pt-6">
                                 <div class="mx-auto w-12 h-12 mb-3 p-1 bg-blue-600 rounded-full">
                                     <img class="" src="/logo/logo.png" alt="">
@@ -149,16 +149,16 @@
             <!-- Dashboard / Visão geral do sistema de estoque -->
             <section>
 
-                <div class="absolute top-0 mt-5 md:ml-56 lg:ml-72 ">
+                <div class="absolute top-0 mt-5 md:ml-56 lg:ml-72">
                     <div class="space-y-1">
                         <p class="md:text-xl md:font-bold lg:text-3xl">Painel</p>
                         <p class="text-slate-600 md:text-lg md:font-light lg:text-xl">Visão geral do sistema de estoque</p>
                     </div>
                 </div>
 
-                <div class="absolute top-0 md:ml-52 md:mt-24 lg:ml-72 lg:mt-28 px-2">
+                <div class="absolute top-0 md:ml-52 md:mt-24 lg:ml-72 lg:mt-28">
                     
-                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-">
+                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5">
                         
                         <!-- Total de Produtos -->
                         <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-5 px-5">
@@ -220,16 +220,16 @@
 
                     </div>
 
-                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-1 lg:grid-cols-2 gap-2">
+                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-1 lg:grid-cols-2  lg:mt-3 gap-3 lg:gap-5">
 
                         <!-- Movimentações (Últimos 7 dias) -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 mt-2 px-5 py-5">
+                        <div class="bg-white rounded-xl border-[0.1rem] lg:h-96 border-gray-200 mt-2 px-5 py-5">
                             <div>
                                 <p class="text-md font-medium mb-3 lg:mb-9">Movimentações (Últimos 7 dias)</p>     
                             </div>
                             
                             <!-- Entradas / Compras/Reposições -->
-                            <div class="flex bg-green-50 p-5 rounded-lg justify-between items-center lg:mb-5">
+                            <div class="flex bg-green-50 p-5 rounded-lg justify-between items-center lg:mt-5">
                                 <div class="flex items-center gap-5">
                                     <div class="bg-green-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
                                         <i class="text-white font-medium fa-solid fa-arrow-up"></i>
@@ -247,7 +247,7 @@
                             </div>
 
                             <!-- Saídas / Vendas/Perdas -->
-                            <div class="flex bg-red-50 p-5 rounded-lg justify-between items-center lg:mb-5">
+                            <div class="flex bg-red-50 p-5 rounded-lg justify-between items-center mt-5 lg:mt-5">
                                 <div class="flex items-center gap-5">
                                     <div class="bg-red-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
                                         <i class="text-white font-medium fa-solid fa-arrow-up"></i>
@@ -267,12 +267,12 @@
                         </div>
 
                         <!-- Gráfico de Movimentações -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 mt-2 px-5 py-5">
+                        <div class="bg-white rounded-xl border-[0.1rem] lg:h-96 border-gray-200 mt-0 lg:mt-2 px-5 py-5">
                             <div>
-                                <p class="text-md font-medium mb-3 lg:mb-9">Gráfico de Movimentações</p>     
+                                <p class="text-md font-medium mb-3 ">Gráfico de Movimentações</p>     
                             </div>
                             
-                            <div class="sm:w-md lg:w-3xl px-5">
+                            <div class="sm:w-md lg:w-2xl px-5">
                                 <canvas id="inventoryChart"></canvas>
                             </div>
                         </div>
