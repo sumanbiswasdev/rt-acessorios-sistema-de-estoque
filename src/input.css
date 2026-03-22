@@ -4,5 +4,11 @@
 @theme{
 
     --font-poppins: "Poppins", sans-serif;
+
+    /* breaking-point */ 
+    /* orientation: landscape */
+    --breakpoint-tablet: 768px;
+    --breakpoint-laptop: 1366px;
+    --breakpoint-desktop: 1920px;
     
 }
