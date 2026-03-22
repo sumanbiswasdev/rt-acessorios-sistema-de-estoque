@@ -222,6 +222,9 @@
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
@@ -302,9 +305,6 @@
   }
   .h-12 {
     height: calc(var(--spacing) * 12);
-  }
-  .h-full {
-    height: 100%;
   }
   .h-screen {
     height: 100vh;
@@ -752,11 +752,6 @@
   .tablet\:w-36 {
     @media (width >= 768px) {
       width: calc(var(--spacing) * 36);
-    }
-  }
-  .tablet\:w-60 {
-    @media (width >= 768px) {
-      width: calc(var(--spacing) * 60);
     }
   }
   .tablet\:w-\[450px\] {
