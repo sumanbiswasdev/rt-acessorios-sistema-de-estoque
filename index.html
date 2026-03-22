@@ -15,69 +15,70 @@
             <section>
                 <div class="container mx-auto">
 
-                    <div class="bg-blue-600 h-20 w-20 p-1 mt-20 flex justify-center items-center mx-auto rounded-full">
-                        <img class="w-28" src="/logo/logo.png" alt="">
+                    <div class="flex flex-col justify-center items-center tablet:mt-36 laptop:mt-12 desktop:mt-20">
+                        <div class="my-5">
+                            <img class="mx-auto tablet:w-36 desktop:w-40" src="/logo/logo.png" alt="rt-logo">
+                        </div>
+
+                        <div class="text-center tablet:mt-2">
+                            <h1 class="text-3xl font-bold text-gray-800">RT ACESSÓRIOS</h1>
+                            <p class="text-lg text-gray-700 font-light">Sistema de Gerenciamento de Estoque</p>
+                        </div>
                     </div>
 
-                    <div class="text-center space-y-2 mt-8">
-                        <h1 class="text-3xl font-bold text-gray-800">RT ACESSÓRIOS</h1>
-                        <p class="text-lg text-gray-700 font-light">Sistema de Gerenciamento de Estoque</p>
-                    </div>
+                    <!-- Entrar no Sitema -->
 
+                    <div class="bg-white p-8 tablet:mt-12 rounded-2xl shadow-md border-[0.1rem] border-slate-300 
+                    w-[400px] md:w-[500px] lg:w-[600px] mx-auto">
+
+                        <div class="space-y-1">
+                            <p class="text-lg font-medium">Entrar no Sistema</p>
+                            <p class="text-sm md:text-lg font-light text-gray-700">Digite suas credenciais para acessar o sistema</p>
+                        </div>
+
+                        <div class="flex flex-col gap-6 w-full">
+
+                            <!-- Usuário -->
+                            <div class="flex flex-col gap-2 mt-5">
+                                
+                                <label for="username" class="text-lg font-medium">Usuário</label>
+
+                                <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <!-- User Icon (Heroicons) -->
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </div>
+                                <input type="text" id="username" class="w-full pl-10 pr-3 py-2 bg-gray-100 border-transparent rounded-md text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Digite seu usuário">
+                                </div>
+                            </div>
+
+                            <!-- Senha -->
+                            <div class="flex flex-col gap-2 ">
+                                
+                                <label for="username" class="text-lg font-medium">Senha</label>
+
+                                <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <!-- User Icon (Heroicons) -->
+                                    <ion-icon name="lock-closed-outline"></ion-icon>
+                                </div>
+                                <input type="text" id="username" class="w-full pl-10 pr-3 py-2 bg-gray-100 border-transparent rounded-md text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Digite seu senha">
+                                </div>
+                            </div>
+
+                            <a class="text-white cursor-pointer" href="dashboard.html">
+                                    <button class="w-full mt-5 bg-slate-700 text-center py-2 rounded-lg hover:bg-slate-800 
+                                    hover:transition-all ease-in-out duration-300 cursor-pointer">Entrar</button></a>
+
+                            <!-- Todos os direitos reservados -->
+                            <div class="tablet:flex md:justify-center md:items-center gap-1">
+                                <p class="text-center text-sm">© 2026 RT Acessórios.</p>
+                                <p class="text-center text-sm">Todos os direitos reservados.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
 
-            <!-- Entrar no Sitema -->
-            <section>
-
-                <div class="bg-white p-8 mt-8 rounded-2xl shadow-md border-[0.1rem] border-slate-300 
-                w-[400px] md:w-[500px] lg:w-[600px] mx-auto">
-
-                    <div class="space-y-1">
-                        <p class="text-lg font-medium">Entrar no Sistema</p>
-                        <p class="text-sm md:text-lg font-light text-gray-700">Digite suas credenciais para acessar o sistema</p>
-                    </div>
-
-                    <div class="flex flex-col gap-6 w-full">
-
-                        <!-- Usuário -->
-                        <div class="flex flex-col gap-2 mt-5">
-                            
-                            <label for="username" class="text-lg font-medium">Usuário</label>
-
-                            <div class="relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <!-- User Icon (Heroicons) -->
-                                <ion-icon name="person-outline"></ion-icon>
-                            </div>
-                            <input type="text" id="username" class="w-full pl-10 pr-3 py-2 bg-gray-100 border-transparent rounded-md text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Digite seu usuário">
-                            </div>
-                        </div>
-
-                        <!-- Senha -->
-                        <div class="flex flex-col gap-2 ">
-                            
-                            <label for="username" class="text-lg font-medium">Senha</label>
-
-                            <div class="relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <!-- User Icon (Heroicons) -->
-                                <ion-icon name="lock-closed-outline"></ion-icon>
-                            </div>
-                            <input type="text" id="username" class="w-full pl-10 pr-3 py-2 bg-gray-100 border-transparent rounded-md text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Digite seu senha">
-                            </div>
-                        </div>
-
-                        <a class="text-white cursor-pointer" href="dashboard.html">
-                                <button class="w-full bg-slate-700 text-center py-2 rounded-lg hover:bg-slate-800 
-                        hover:transition-all ease-in-out duration-300 cursor-pointer">Entrar</button></a>
-
-                        <!-- Todos os direitos reservados -->
-                         <div class="md:flex md:justify-center md:items-center gap-1">
-                            <p class="text-center text-sm">© 2026 RT Acessórios.</p>
-                            <p class="text-center text-sm">Todos os direitos reservados.</p>
-                         </div>
-                    </div>
             </section>
         </main>
     
