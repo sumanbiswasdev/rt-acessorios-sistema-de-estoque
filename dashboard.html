@@ -4,283 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerente de Estoque: Sistema de Gerenciamento de Estoque</title>
-    <link rel="shortcut icon" href="/logo/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/logo/logo_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="src/output.css">
 </head>
-<body class="font-poppins bg-gray-50">
+<body class="font-public-sans bg-gray-50">
 
         <main>
 
             <section>
 
                 <!-- Painel / Sistema de Estoque -->
-            <div class="bg-white md:w-48 lg:w-64 h-screen border-gray-300 border-r-[0.1rem] drop-shadow-sm">
-                        <div class="bg-white md:w-48 md:h-36 lg:w-64 lg:h-40 border-gray-300 border-b-[0.1rem] border-r-[0.1rem]">
-                            <div class="flex flex-col justify-center items-start mx-auto px-8 pt-6">
-                                <div class="mx-auto w-12 h-12 mb-3 p-1 bg-blue-600 rounded-full">
-                                    <img class="" src="/logo/logo.png" alt="">
+
+                <div class="flex">
+
+                    <!-- logo / Sistema de Estoque -->
+                    <div class="bg-white border-r-[0.1rem] tablet:w-60 h-screen border-gray-300">
+
+                        <div class="border-b-[0.1rem] border-gray-300 mt-5 py-5">
+                            <div class="w-28 mx-auto">
+                                <img src="/logo/logo.png" alt="logo">
+                            </div>
+                            <div class="text-center text-lg font-medium text-gray-400 mt-2">
+                                <h3>Sistema de Estoque</h3>
+                            </div>
+                        </div>
+
+                        <!-- Painel -->
+                        <div class="w-full px-5 mt-5 space-y-2">
+
+                            <!-- Dashborad -->
+                            <div class="flex items-center space-x-3 cursor-pointer
+                             bg-blue-600 hover:bg-blue-700 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                                <i class="text-white fa-solid fa-cube"></i>
+                                <p class="text-white text-lg font-light">Dashborad</p>
+                            </div>
+
+                            <!-- Produtos -->
+                            <div class="flex items-center space-x-3 cursor-pointer
+                              hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                                <i class="text-black fa-solid fa-box"></i>
+                                <p class="text-black text-lg font-light">Produtos</p>
+                            </div>
+
+                            <!-- Movimentações -->
+                            <div class="flex items-center space-x-3 cursor-pointer
+                              hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                                <i class="text-black fa-solid fa-chart-simple"></i>
+                                <p class="text-black text-lg font-light">Movimentações</p>
+                            </div>
+
+                            <!-- Fornecedores -->
+                            <div class="flex items-center space-x-3 cursor-pointer
+                              hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                                <i class="text-black fa-solid fa-user-group"></i>
+                                <p class="text-black text-lg font-light">Fornecedores</p>
+                            </div>
+
+                            <!-- Relatórios -->
+
+                            <div class="flex items-center space-x-3 cursor-pointer
+                              hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                                <i class="text-black fa-solid fa-file"></i>
+                                <p class="text-black text-lg font-light">Relatórios</p>
+                            </div>
+
+                            <!-- Alertas -->
+
+                            <div class="flex items-center space-x-3 cursor-pointer
+                              hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                                <i class="text-black fa-solid fa-circle-exclamation"></i>
+                                <p class="text-black text-lg font-light">Alertas</p>
+                            </div>
+                        </div>
+
+                        <!-- Administrador -->
+                        <div class=" border-t-[0.1rem] w-full border-gray-300 tablet:mt-[420px] laptop:mt-[220px]
+                        desktop:mt-[360px] pt-3 px-3">
+                            <div class="text-center flex items-center w-full rounded-lg cursor-pointer hover:bg-gray-100 p-3 gap-2">
+                                <div class="bg-blue-600 flex items-center justify-center rounded-full w-10 h-10 p-1">
+                                    <p class="text-lg font-medium text-white">A</p>
                                 </div>
-                                <h1 class="text-blue-600 md:text-lg lg:text-2xl font-bold mx-auto">Painel</h1>
-                                <p class="text-gray-600 text-[12px] lg:text-lg font-light mx-auto">Sistema de Estoque</p>
-                            </div>
-                        </div>
-
-                        <!-- Dashboard -->
-
-                    <div class="md:px-3 md:pt-5">
-                        <div class="flex flex-col gap-3">
-                            <a href="dashboard.html">
-                                <div class="rounded-lg hover:bg-blue-700 hover:transition-all hover:duration-300
-                                hover:ease-in-out bg-blue-600 p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-white text-[16px] font-light fa-solid fa-cube"></i>
-                                <P class="text-white text-[14px] font-light">Dashboard</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                        <!-- Produtos -->
-
-                    <div class="md:px-3 md:pt-2">
-                        <div class="flex flex-col gap-3">
-                            <a href="/produtos.html">
-                                <div class="rounded-lg hover:transition-all hover:duration-300
-                                hover:ease-in-out hover:bg-gray-100 p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-black text-[16px] font-light fa-solid fa-box"></i>
-                                <P class="text-black text-[14px] lg:text-[16px] font-light">Produtos</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                    </div>
-                    
-                        <!-- Movimentações -->
-
-                    <div class="md:px-3 md:pt-2">
-                        <div class="flex flex-col gap-3">
-                            <a href="movimentacaos.html">
-                                <div class="rounded-lg hover:transition-all hover:duration-300
-                                hover:ease-in-out hover:bg-gray-100 p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-black text-[16px] font-light fa-solid fa-chart-simple"></i>
-                                <P class="text-black text-[14px] lg:text-[16px] font-light">Movimentações</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                        <!-- Fornecedores -->
-
-                    <div class="md:px-3 md:pt-2">
-                        <div class="flex flex-col gap-3">
-                            <a href="fornecedores.html">
-                                <div class="rounded-lg hover:transition-all hover:duration-300
-                                hover:ease-in-out hover:bg-gray-100 p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-black text-[16px] font-light fa-solid fa-user-group"></i>
-                                <P class="text-black text-[14px] lg:text-[16px] font-light">Fornecedores</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                        <!-- Relatórios -->
-
-                    <div class="md:px-3 md:pt-2">
-                        <div class="flex flex-col gap-3">
-                            <a href="relatorios.html">
-                                <div class="rounded-lg hover:transition-all hover:duration-300
-                                hover:ease-in-out hover:bg-gray-100 p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-black text-[16px] font-light fa-solid fa-file"></i>
-                                <P class="text-black text-[14px] lg:text-[16px] font-light">Relatórios</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                        <!-- Alertas -->
-
-                    <div class="md:px-3 md:pt-2">
-                        <div class="flex flex-col gap-3">
-                            <a href="alertas.html.html">
-                                <div class="rounded-lg hover:transition-all hover:duration-300
-                                hover:ease-in-out hover:bg-gray-100 p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-black text-[16px] font-light fa-solid fa-circle-exclamation"></i>
-                                <P class="text-black text-[14px] lg:text-[16px] font-light">Alertas</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                    <!-- Administrador -->
-                <div class="bg-white absolute bottom-0 md:w-48 md:h-24 lg:w-64 lg:h-24 border-gray-300 border-t-[0.1rem] 
-                            border-r-[0.1rem]">
-                        <div class="flex  items-center space-x-3 w-40 lg:w-56 mx-auto bg-gray-200 my-5  rounded-lg p-2">
-                            <div class="flex flex-col rounded-full p-2 h-8 w-8 lg:h-10 lg:w-10 bg-blue-600 justify-center items-center">
-                                <p class="text-2xl text-white font-bold">A</p>
-
-                            </div>
-                            <div class="">
-                                <p class="text-xs lg:text-sm font-medium">Administrador</p>
-                                <p class="text-xs lg:text-sm font-light text-gray-400">Administrador</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-            </div>
-            </section>
-
-            <!-- Dashboard / Visão geral do sistema de estoque -->
-            <section>
-
-                <div class="absolute top-0 mt-5 md:ml-56 lg:ml-72">
-                    <div class="space-y-1">
-                        <p class="md:text-xl md:font-bold lg:text-3xl">Painel</p>
-                        <p class="text-slate-600 md:text-lg md:font-light lg:text-xl">Visão geral do sistema de estoque</p>
-                    </div>
-                </div>
-
-                <div class="absolute top-0 md:ml-52 md:mt-24 lg:ml-72 lg:mt-28">
-                    
-                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5">
-                        
-                        <!-- Total de Produtos -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-5 px-5">
-                            <div class="flex justify-between items-center">
-                                <p class="text-sm font-medium text-gray-500">Total de Produtos</p>
-                                <i class="text-blue-600 fa-solid fa-box"></i>       
-                            </div>
-                            
-                            <div class="flex flex-col mt-8">
-                                <p class="text-2xl text-black font-bold">235</p>
-                                <p class="text-xs font-medium text-gray-500">Produtos cadastrados</p>
-
-                            </div>
-                        </div>
-
-                        <!-- Estoque Total -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-5 px-5">
-                            <div class="flex justify-between items-center">
-                                <p class="text-sm font-medium text-gray-500">Estoque Total</p>
-                                <i class="text-green-600 fa-solid fa-arrow-trend-up"></i>    
-         
-                            </div>
-                            
-                            <div class="flex flex-col mt-8">
-                                <p class="text-2xl text-black font-bold">23500</p>
-                                <p class="text-xs font-medium text-gray-500">Unidades em estoque</p>
-
-                            </div>
-                        </div>
-
-                        <!-- Valor Total -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-5 px-5">
-                            <div class="flex justify-between items-center">
-                                <p class="text-sm font-medium text-gray-500">Valor Total</p>
-                                <i class="text-green-600 fa-solid fa-dollar-sign"></i>     
-                            </div>
-                            
-                            <div class="flex flex-col mt-8">
-                                <p class="text-2xl text-black font-bold">R$ 572.550,00</p>
-                                <p class="text-xs font-medium text-gray-500">Valor do inventário</p>
-
-                            </div>
-                        </div>
-
-                        <!-- Alertas de Estoque -->
-                        <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 py-5 px-5">
-                            <div class="flex justify-between items-center">
-                                <p class="text-sm font-medium text-gray-500">Alertas de Estoque</p>
-                                <i class="text-red-600 fa-solid fa-circle-exclamation"></i>       
-                            </div>
-                            
-                            <div class="flex flex-col mt-8">
-                                <p class="text-2xl text-black font-bold">0</p>
-                                <p class="text-xs font-medium text-gray-500">Produtos abaixo do mínimo</p>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="grid sm:w-lg lg:w-[1600px] sm:grid-cols-1 lg:grid-cols-2  lg:mt-3 gap-3 lg:gap-5">
-
-                        <!-- Movimentações (Últimos 7 dias) -->
-                        <div class="bg-white rounded-xl border-[0.1rem] lg:h-96 border-gray-200 mt-2 px-5 py-5">
-                            <div>
-                                <p class="text-md font-medium mb-3 lg:mb-9">Movimentações (Últimos 7 dias)</p>     
-                            </div>
-                            
-                            <!-- Entradas / Compras/Reposições -->
-                            <div class="flex bg-green-50 p-5 rounded-lg justify-between items-center lg:mt-5">
-                                <div class="flex items-center gap-5">
-                                    <div class="bg-green-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
-                                        <i class="text-white font-medium fa-solid fa-arrow-up"></i>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <p class="text-lg font-medium">Entradas</p>
-                                        <p class="text-md font-light">Compras/Reposições</p>
-                                    </div>
-
+                                <div class="flex flex-col items-start">
+                                    <h2 class="text-black font-bold">Administrador</h2>
+                                    <h4 class="text-gray-400 font-light">Administrador</h4>
                                 </div>
-
-                                <div>
-                                    <p class="text-2xl text-green-600 font-bold">0</p>
-                                </div>
-                            </div>
-
-                            <!-- Saídas / Vendas/Perdas -->
-                            <div class="flex bg-red-50 p-5 rounded-lg justify-between items-center mt-5 lg:mt-5">
-                                <div class="flex items-center gap-5">
-                                    <div class="bg-red-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
-                                        <i class="text-white font-medium fa-solid fa-arrow-up"></i>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <p class="text-lg font-medium">Saídas</p>
-                                        <p class="text-md font-light">Vendas/Perdas</p>
-                                    </div>
-
-                                </div>
-
-                                <div>
-                                    <p class="text-2xl text-red-600 font-bold">0</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Gráfico de Movimentações -->
-                        <div class="bg-white rounded-xl border-[0.1rem] lg:h-96 border-gray-200 mt-0 lg:mt-2 px-5 py-5">
-                            <div>
-                                <p class="text-md font-medium mb-3 ">Gráfico de Movimentações</p>     
-                            </div>
-                            
-                            <div class="sm:w-md lg:w-2xl px-5">
-                                <canvas id="inventoryChart"></canvas>
                             </div>
                         </div>
                         
                     </div>
-                </div>
 
+                    <!-- Painel / Visão geral do sistema de estoque -->
+                    <div>
+                        <div class="mx-5 mt-5">
+                            <p class="text-3xl font-bold">Painel</p>
+                            <p class="text-slate-600 text-lg font-light">Visão geral do sistema de estoque</p>
+                        </div>
+
+
+                        <!-- sistenma grid -->
+                        <div class="tablet:mr-8 laptop:mr-0 desktop:mr-0">
+                            <div class="mt-5 ml-5 grid w-full tablet:grid-cols-2 laptop:grid-cols-2 desktop:grid-cols-4 tablet:gap-3 laptop:gap-3">
+
+                            <!-- Total de Produtos -->
+                                <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
+                                    <div class="flex justify-between items-center">
+                                        <p class="text-lg text-gray-500 font-medium">Total de Produtos</p>
+                                        <i class="text-blue-600 fa-solid fa-cube"></i>
+                                    </div>
+                                    <div class="mt-5">
+                                        <p class="text-2xl font-bold pt-5">235</p>
+                                        <p class="text-sm text-gray-400 font-light">Produtos cadastrados</p>
+                                    </div>
+                                </div>
+
+                            <!-- Estoque Total -->
+                                <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
+                                    <div class="flex justify-between items-center">
+                                        <p class="text-lg text-gray-500 font-medium">Total de Produtos</p>
+                                        <i class="text-green-600 fa-solid fa-arrow-trend-up"></i>
+                                    </div>
+                                    <div class="mt-5">
+                                        <p class="text-2xl font-bold pt-5">23500</p>
+                                        <p class="text-sm text-gray-400 font-light">Unidades em estoque</p>
+                                    </div>
+
+                                </div>
+
+                            <!-- Valor Total -->
+                                <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
+                                    <div class="flex justify-between items-center">
+                                        <p class="text-lg text-gray-500 font-medium">Valor Total</p>
+                                        <i class="text-green-600 fa-solid fa-dollar-sign"></i>
+                                    </div>
+                                    <div class="mt-5">
+                                        <p class="text-2xl font-bold pt-5">R$ 572.550,00</p>
+                                        <p class="text-sm text-gray-400 font-light">Valor do inventário</p>
+                                    </div>
+
+                                </div>
+                                
+                            <!-- Alertas de Estoque -->
+                                <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
+                                    <div class="flex justify-between items-center">
+                                        <p class="text-lg text-gray-500 font-medium">Alertas de Estoque</p>
+                                        <i class="text-red-600 fa-solid fa-circle-exclamation"></i>
+                                    </div>
+                                    <div class="mt-5">
+                                        <p class="text-2xl font-bold pt-5 text-red-600">0</p>
+                                        <p class="text-sm text-gray-400 font-light">Produtos abaixo do mínimo</p>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!--  Movimentações (Últimos 7 dias) / Gráfico de Movimentações -->
+                        <div class="grid w-full tablet:grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-2 mt-3 gap-2">
+
+                            <!--  Movimentações (Últimos 7 dias) -->
+                            <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 p-5">
+                                    <div>
+                                        <p class="text-md font-medium mb-3 lg:mb-9">Movimentações (Últimos 7 dias)</p> 
+                                    </div>
+
+                                    <!-- Entradas / Compras/Reposições -->
+                                    <div class="flex bg-green-100 p-5 rounded-lg justify-between items-center mt-5">
+                                        <div class="flex items-center gap-5">
+                                            <div class="bg-green-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
+                                                <i class="text-white font-medium fa-solid fa-arrow-up"></i>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <p class="text-lg font-medium">Entradas</p>
+                                                <p class="text-md font-light">Compras/Reposições</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div>
+                                            <p class="text-2xl text-green-600 font-bold">0</p>
+                                        </div>
+                                    </div>
+                            
+                                    <!-- Saídas / Vendas/Perdas -->
+                                    <div class="flex bg-red-100 p-5 rounded-lg justify-between items-center mt-5">
+                                        <div class="flex items-center gap-5">
+                                            <div class="bg-red-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
+                                                <i class="text-white font-medium fa-solid fa-arrow-up"></i>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <p class="text-lg font-medium">Saídas</p>
+                                                <p class="text-md font-light">Vendas/Perdas</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div>
+                                            <p class="text-2xl text-red-600 font-bold">0</p>
+                                        </div>
+                                    </div>
+                            
+                            </div>
+
+                            <!-- Gráfico de Movimentações -->
+                            <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 px-5 py-5">
+                                <div>
+                                    <p class="text-md font-medium mb-3 ">Gráfico de Movimentações</p>     
+                                </div>
+                                
+                                <div class="">
+                                    <canvas id="inventoryChart"></canvas>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+
+                    </div>
+
+                    
+
+                </div>
+            
             </section>
+
+
 
         </main>
 
