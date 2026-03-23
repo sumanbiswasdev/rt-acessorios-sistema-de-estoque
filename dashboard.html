@@ -110,16 +110,16 @@
                     </div>
 
                     <!-- Painel / Visão geral do sistema de estoque -->
-                    <div>
-                        <div class="mx-5 mt-5">
+                    <div class="mx-5">
+                        <div class="mt-5">
                             <p class="text-3xl font-bold">Painel</p>
                             <p class="text-slate-600 text-lg font-light">Visão geral do sistema de estoque</p>
                         </div>
 
 
                         <!-- sistenma grid -->
-                        <div class="">
-                            <div class="mt-5 ml-5 grid w-full tablet:grid-cols-2 laptop:grid-cols-2 desktop:grid-cols-4 tablet:gap-3 laptop:gap-3">
+                            <div class="mt-5 grid w-full tablet:grid-cols-2 laptop:grid-cols-2 desktop:grid-cols-4 
+                            tablet:gap-3 laptop:gap-3">
 
                             <!-- Total de Produtos -->
                                 <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
@@ -173,13 +173,14 @@
                                 </div>
                                 
                             </div>
-                        </div>
+
 
                         <!--  Movimentações (Últimos 7 dias) / Gráfico de Movimentações -->
-                        <div class="grid w-full tablet:grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-2 mt-3 mx-5 tablet:gap-3 laptop:gap-5">
+                        <div class="mt-2 grid w-full tablet:grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-2 
+                        tablet:gap-3 laptop:gap-3">
 
                             <!--  Movimentações (Últimos 7 dias) -->
-                            <div class="bg-white w-f rounded-xl border-[0.1rem] border-gray-200 p-5">
+                            <div class="bg-white max-w-full rounded-xl border-[0.1rem] border-gray-200 p-5">
                                     <div>
                                         <p class="text-md font-medium mb-3 lg:mb-9">Movimentações (Últimos 7 dias)</p> 
                                     </div>
@@ -223,14 +224,13 @@
                             </div>
 
                             <!-- Gráfico de Movimentações -->
-                            <div class="bg-white w-full rounded-xl border-[0.1rem] border-gray-200 px-5 py-5">
+                            <div class="bg-white max-w-full rounded-xl border-[0.1rem] border-gray-200 px-5 py-5">
                                 <div>
                                     <p class="text-md font-medium mb-3">Gráfico de Movimentações</p>     
                                 </div>
                                 
-                                <div class="tablet:w-[450px] tablet:h-[160px] 
-                                laptop:w-[430px] laptop:h-[240px] desktop:w-[650px] desktop:h-[290px]">
-                                    <canvas class="w-" id="inventoryChart"></canvas>
+                                <div class="tablet:w-[340px] laptop:w-auto desktop:w-auto">
+                                    <canvas id="inventoryChart"></canvas>
                                 </div>
                             </div>
                             
