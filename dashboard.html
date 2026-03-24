@@ -9,57 +9,46 @@
 </head>
 <body class="font-public-sans bg-gray-50">
 
-        <main>
+        <div class="flex">
 
-            <section>
+            <aside class="flex flex-col w-64 min-h-screen bg-white border-r border-gray-200">
 
-                <!-- Painel / Sistema de Estoque -->
+                <!--  logo / Sistema de Estoque -->
+                <div class="p-6 border-b border-gray-200">
+                    <img class="w-28 mx-auto mb-2" src="/logo/logo.png" alt="logo">
+                    <h1 class="text-center text-lg font-medium text-gray-400 mt-">Sistema de Estoque</h1>
+                </div>
+                
+                <!-- Dashborad / Produtos / Movimentações / Fornecedores / Relatórios / Alertas -->
+                <nav class="flex-1 px-4 space-y-1">
 
-                <div class="flex">
-
-                    <!-- logo / Sistema de Estoque -->
-                    <div class="bg-white border-r-[0.1rem] w-auto flex flex-col justify-between h-screen border-gray-300">
-
-                        <div class="border-b-[0.1rem] border-gray-300 mt-5 py-5">
-                            <div class="w-28 mx-auto">
-                                <img src="/logo/logo.png" alt="logo">
-                            </div>
-                            <div class="text-center text-lg font-medium text-gray-400 mt-2">
-                                <h3>Sistema de Estoque</h3>
-                            </div>
-                        </div>
-
-                        <!-- Dashborad / Produtos / Movimentações / Fornecedores / Relatórios / Alertas-->
-                        <div class="px-4 tablet:mb-[420px] laptop:mb-52 desktop:mb-80">
-
-                            <!-- Dashborad -->
+                <!-- Dashborad -->
                             <a href="dashboard.html">
-                                <div class="flex items-center space-x-3 cursor-pointer
+                                <div class="flex items-center space-x-3 cursor-pointer mt-5
                                     bg-blue-600 hover:bg-blue-700 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                                     <i class="text-white fa-solid fa-cube"></i>
                                     <p class="text-white text-lg font-light">Dashborad</p>
                                 </div>
                             </a>
-
-                            <!-- Produtos -->
+                <!-- Produtos -->
                             <a href="produtos.html">
-                                <div class="mt-2 flex items-center space-x-3 cursor-pointer
+                                <div class="flex items-center space-x-3 cursor-pointer mt-2
                                 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                                 <i class="text-black fa-solid fa-box"></i>
                                 <p class="text-black text-lg font-light">Produtos</p>
                             </div>
                             </a>
 
-                            <!-- Movimentações -->
+                <!-- Movimentações -->
                             <a href="movimentacaos.html">
-                                <div class="mt-2 flex items-center space-x-3 cursor-pointer
+                                <div class="flex items-center space-x-3 cursor-pointer mt-2
                                 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                                 <i class="text-black fa-solid fa-chart-simple"></i>
                                 <p class="text-black text-lg font-light">Movimentações</p>
                             </div>
                             </a>
 
-                            <!-- Fornecedores -->
+                <!-- Fornecedores -->
                             <a href="fornecedores.html">
                                 <div class="mt-2 flex items-center space-x-3 cursor-pointer
                                 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
@@ -68,8 +57,7 @@
                             </div>
                             </a>
 
-                            <!-- Relatórios -->
-
+                <!-- Relatórios -->
                             <a href="relatorios.html">
                                 <div class="mt-2 flex items-center space-x-3 cursor-pointer
                                 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
@@ -78,8 +66,7 @@
                             </div>
                             </a>
 
-                            <!-- Alertas -->
-
+                <!-- Alertas -->
                             <a href="alertas.html">
                                 <div class="mt-2 flex items-center space-x-3 cursor-pointer
                                 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
@@ -87,39 +74,29 @@
                                 <p class="text-black text-lg font-light">Alertas</p>
                             </div>
                             </a>
+                </nav>
 
-                        </div>
-
-                        <!-- Administrador -->
-                        <a href="#">
-                        <div class="border-t-[0.1rem]  border-gray-300 p-2 ">
-
-                            <div class="text-center flex items-center rounded-lg cursor-pointer
-                             hover:bg-gray-100 p-2 mt-1 space-x-5">
-                                <div class="bg-blue-600  flex items-center justify-center rounded-full w-10 h-10">
-                                    <p class="text-lg font-medium text-white">A</p>
-                                </div>
-                                <div class="flex flex-col items-start">
-                                    <h2 class="text-black font-bold">Administrador</h2>
-                                    <h4 class="text-gray-400 font-light">Administrador</h4>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-                        
+                <div class="mt-auto border-t p-4 border-gray-200 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm">
+                        <p>A</p>
                     </div>
+                    <div class="flex flex-col">
+                        <span class="text-sm font-bold text-slate-800 leading-tight">Administrador</span>
+                        <span class="text-xs text-slate-400">Administrador</span>
+                    </div>
+                </div>
+                
+            </aside>
 
-                    <!-- Painel / Visão geral do sistema de estoque -->
-                    <div class="mx-5">
-                        <div class="mt-5">
-                            <p class="text-3xl font-bold">Painel</p>
-                            <p class="text-slate-600 text-lg font-light">Visão geral do sistema de estoque</p>
-                        </div>
+            <main class="flex-1 p-8">
+                <header class="mb-8">
+                    <h2 class="text-3xl font-bold">Painel</h2>
+                    <p class="text-slate-600 text-lg font-light">Visão geral do sistema de estoque</p>
+                </header>
 
-
-                        <!-- sistenma grid -->
+                <!-- sistenma grid -->
                             <div class="mt-5 grid w-full tablet:grid-cols-2 laptop:grid-cols-2 desktop:grid-cols-4 
-                            tablet:gap-3 laptop:gap-3">
+                            tablet:gap-3 laptop:gap-5">
 
                             <!-- Total de Produtos -->
                                 <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
@@ -175,9 +152,9 @@
                             </div>
 
 
-                        <!--  Movimentações (Últimos 7 dias) / Gráfico de Movimentações -->
+                <!--  Movimentações (Últimos 7 dias) / Gráfico de Movimentações -->
                         <div class="mt-2 grid w-full tablet:grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-2 
-                        tablet:gap-3 laptop:gap-3">
+                        tablet:gap-3 laptop:gap-5">
 
                             <!--  Movimentações (Últimos 7 dias) -->
                             <div class="bg-white max-w-full rounded-xl border-[0.1rem] border-gray-200 p-5">
@@ -229,25 +206,16 @@
                                     <p class="text-md font-medium mb-3">Gráfico de Movimentações</p>     
                                 </div>
                                 
-                                <div class="tablet:w-sm laptop:w-auto desktop:w-auto">
+                                <div class="tablet:w-md laptop:w-auto desktop:w-auto">
                                     <canvas id="inventoryChart"></canvas>
                                 </div>
                             </div>
-                            
 
-                        </div>
+            </main>
+                           
+        </div>
 
-                    </div>
-
-                    
-
-                </div>
-            
-            </section>
-
-
-
-        </main>
+        
 
         
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -257,4 +225,3 @@
     <script src="/script.js"></script>
 </body>
 </html>
-
