@@ -9,7 +9,7 @@
 </head>
 <body class="font-public-sans bg-gray-50">
 
-        <div class="flex">
+        <main class="grid w-full grid-cols-3">
 
             <aside class="flex flex-col w-64 min-h-screen bg-white border-r border-gray-200">
 
@@ -25,15 +25,15 @@
                 <!-- Dashborad -->
                             <a href="dashboard.html">
                                 <div class="flex items-center space-x-3 cursor-pointer mt-5
-                                    bg-blue-600 hover:bg-blue-700 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
-                                    <i class="text-white fa-solid fa-cube"></i>
-                                    <p class="text-white text-lg font-light">Dashborad</p>
+                                    hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                                    <i class="text-black fa-solid fa-cube"></i>
+                                    <p class="text-black text-lg font-light">Dashborad</p>
                                 </div>
                             </a>
                 <!-- Produtos -->
                             <a href="produtos.html">
                                 <div class="flex items-center space-x-3 cursor-pointer mt-2
-                                hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                                bg-blue-600 hover:bg-blue-700 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                                 <i class="text-black fa-solid fa-box"></i>
                                 <p class="text-black text-lg font-light">Produtos</p>
                             </div>
@@ -88,133 +88,24 @@
                 
             </aside>
 
-            <main class="flex-1 p-8">
-                <header class="mb-8">
-                    <h2 class="text-3xl font-bold">Painel</h2>
-                    <p class="text-slate-600 text-lg font-light">Visão geral do sistema de estoque</p>
-                </header>
+            <!-- Produtos / Gerenciamento de estoque -->
+                <section>
 
-                <!-- sistenma grid -->
-                            <div class="mt-5 grid w-full tablet:grid-cols-2 laptop:grid-cols-2 desktop:grid-cols-4 
-                            tablet:gap-3 laptop:gap-5">
-
-                            <!-- Total de Produtos -->
-                                <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
-                                    <div class="flex justify-between items-center">
-                                        <p class="text-lg text-gray-500 font-medium">Total de Produtos</p>
-                                        <i class="text-blue-600 fa-solid fa-cube"></i>
-                                    </div>
-                                    <div class="mt-1">
-                                        <p class="text-[21px] font-bold pt-5">235</p>
-                                        <p class="text-sm text-gray-400 font-light">Produtos cadastrados</p>
-                                    </div>
-                                </div>
-
-                            <!-- Estoque Total -->
-                                <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
-                                    <div class="flex justify-between items-center">
-                                        <p class="text-lg text-gray-500 font-medium">Total de Produtos</p>
-                                        <i class="text-green-600 fa-solid fa-arrow-trend-up"></i>
-                                    </div>
-                                    <div class="mt-1">
-                                        <p class="text-[21px] font-bold pt-5">23500</p>
-                                        <p class="text-sm text-gray-400 font-light">Unidades em estoque</p>
-                                    </div>
-
-                                </div>
-
-                            <!-- Valor Total -->
-                                <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
-                                    <div class="flex justify-between items-center">
-                                        <p class="text-lg text-gray-500 font-medium">Valor Total</p>
-                                        <i class="text-green-600 fa-solid fa-dollar-sign"></i>
-                                    </div>
-                                    <div class="mt-1">
-                                        <p class="text-[21px] font-bold pt-5">R$ 572.550,00</p>
-                                        <p class="text-sm text-gray-400 font-light">Valor do inventário</p>
-                                    </div>
-
-                                </div>
-                                
-                            <!-- Alertas de Estoque -->
-                                <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
-                                    <div class="flex justify-between items-center">
-                                        <p class="text-lg text-gray-500 font-medium">Alertas de Estoque</p>
-                                        <i class="text-red-600 fa-solid fa-circle-exclamation"></i>
-                                    </div>
-                                    <div class="mt-1">
-                                        <p class="text-[21px] font-bold pt-5 text-red-600">0</p>
-                                        <p class="text-sm text-gray-400 font-light">Produtos abaixo do mínimo</p>
-                                    </div>
-
-                                </div>
-                                
-                            </div>
-
-
-                <!--  Movimentações (Últimos 7 dias) / Gráfico de Movimentações -->
-                        <div class="mt-2 grid w-full tablet:grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-2 
-                        tablet:gap-3 laptop:gap-5">
-
-                            <!--  Movimentações (Últimos 7 dias) -->
-                            <div class="bg-white max-w-full rounded-xl border-[0.1rem] border-gray-200 p-5">
-                                    <div>
-                                        <p class="text-md font-medium mb-3 lg:mb-9">Movimentações (Últimos 7 dias)</p> 
-                                    </div>
-
-                                    <!-- Entradas / Compras/Reposições -->
-                                    <div class="flex bg-green-100 p-5 rounded-lg justify-between items-center mt-5">
-                                        <div class="flex items-center gap-5">
-                                            <div class="bg-green-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
-                                                <i class="text-white font-medium fa-solid fa-arrow-up"></i>
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-lg font-medium">Entradas</p>
-                                                <p class="text-md font-light">Compras/Reposições</p>
-                                            </div>
-
-                                        </div>
-
-                                        <div>
-                                            <p class="text-2xl text-green-600 font-bold">0</p>
-                                        </div>
-                                    </div>
-                            
-                                    <!-- Saídas / Vendas/Perdas -->
-                                    <div class="flex bg-red-100 p-5 rounded-lg justify-between items-center mt-5">
-                                        <div class="flex items-center gap-5">
-                                            <div class="bg-red-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
-                                                <i class="text-white font-medium fa-solid fa-arrow-up"></i>
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-lg font-medium">Saídas</p>
-                                                <p class="text-md font-light">Vendas/Perdas</p>
-                                            </div>
-
-                                        </div>
-
-                                        <div>
-                                            <p class="text-2xl text-red-600 font-bold">0</p>
-                                        </div>
-                                    </div>
-                            
-                            </div>
-
-                            <!-- Gráfico de Movimentações -->
-                            <div class="bg-white max-w-full rounded-xl border-[0.1rem] border-gray-200 px-5 py-5">
-                                <div>
-                                    <p class="text-md font-medium mb-3">Gráfico de Movimentações</p>     
-                                </div>
-                                
-                                <div class="tablet:w-md laptop:w-auto desktop:w-auto">
-                                    <canvas id="inventoryChart"></canvas>
-                                </div>
-                            </div>
+                    <div class="flex">
+                        <div class="mb-8">
+                            <h2 class="text-3xl font-bold">Produtos</h2>
+                            <p class="text-slate-600 text-lg font-light">Gerenciamento de estoque</p>
                         </div>
+                    </div>
+                </section>
 
-            </main>
-                           
-        </div>
+                <section>
+                    <div class="">
+                        <button>+ Novo Produto</button>
+                    </div>
+                </section>
+
+        </main>
 
         
 
