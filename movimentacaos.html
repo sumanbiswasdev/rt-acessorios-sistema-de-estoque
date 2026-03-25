@@ -4,178 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerente de Estoque: Sistema de Gerenciamento de Estoque</title>
-    <link rel="shortcut icon" href="/logo/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/logo/logo_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="src/output.css">
 </head>
-<body class="font-poppins bg-gray-50">
+<body class="font-public-sans bg-gray-50">
 
-        <main>
+        <div class="fixed mx-auto rounded-xl inset-0 bg-black bg-opacity-40 flex justify-center items-center p-5">
 
-            <section>
+            <div class="bg-white p-8 rounded-lg w-1/2">
+                <p class="text-2xl mb-4 font-semibold">Novo Produto</p>
 
-            <div class="flex">
-                    <!-- Painel / Sistema de Estoque -->
-                <div class="bg-white md:w-48 lg:w-64 h-screen border-gray-300 border-r-[0.1rem] drop-shadow-sm">
-                            <div class="bg-white md:w-48 md:h-36 lg:w-64 lg:h-40 border-gray-300 border-b-[0.1rem] border-r-[0.1rem]">
-                                <div class="flex flex-col justify-center items-start mx-auto px-8 pt-6">
-                                    <div class="mx-auto w-12 h-12 mb-3 p-1 bg-blue-600 rounded-full">
-                                        <img class="" src="/logo/logo.png" alt="">
-                                    </div>
-                                    <h1 class="text-blue-600 md:text-lg lg:text-2xl font-bold mx-auto">Painel</h1>
-                                    <p class="text-gray-600 text-[12px] lg:text-lg font-light mx-auto">Sistema de Estoque</p>
-                                </div>
-                            </div>
+                <div class="grid grid-cols-2 gap-4">
 
-                    <div class="md:px-3 md:pt-5">
-                        <div class="flex flex-col gap-3">
-                            <a href="dashboard.html">
-                                <div class="rounded-lg hover:bg-gray-100 hover:transition-all hover:duration-300
-                                hover:ease-in-out p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-black text-[16px] font-light fa-solid fa-cube"></i>
-                                <P class="text-black text-[14px] font-light">Dashboard</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                        <!-- Produtos -->
-
-                    <div class="md:px-3 md:pt-2">
-                        <div class="flex flex-col gap-3">
-                            <a href="dashboard.html">
-                                <div class="rounded-lg hover:bg-blue-700 hover:transition-all hover:duration-300
-                                hover:ease-in-out bg-blue-600 p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-white text-[16px] font-light fa-solid fa-box"></i>
-                                <P class="text-white text-[14px] font-light">Produtos</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                        
-                    </div>
-                    
-                        <!-- Movimentações -->
-
-                    <div class="md:px-3 md:pt-2">
-                        <div class="flex flex-col gap-3">
-                            <a href="movimentacaos.html.html">
-                                <div class="rounded-lg hover:transition-all hover:duration-300
-                                hover:ease-in-out hover:bg-gray-100 p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-black text-[16px] font-light fa-solid fa-chart-simple"></i>
-                                <P class="text-black text-[14px] lg:text-[16px] font-light">Movimentações</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                        <!-- Fornecedores -->
-
-                    <div class="md:px-3 md:pt-2">
-                        <div class="flex flex-col gap-3">
-                            <a href="fornecedores.html.html">
-                                <div class="rounded-lg hover:transition-all hover:duration-300
-                                hover:ease-in-out hover:bg-gray-100 p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-black text-[16px] font-light fa-solid fa-user-group"></i>
-                                <P class="text-black text-[14px] lg:text-[16px] font-light">Fornecedores</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                        <!-- Relatórios -->
-
-                    <div class="md:px-3 md:pt-2">
-                        <div class="flex flex-col gap-3">
-                            <a href="relatorios.html.html">
-                                <div class="rounded-lg hover:transition-all hover:duration-300
-                                hover:ease-in-out hover:bg-gray-100 p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-black text-[16px] font-light fa-solid fa-file"></i>
-                                <P class="text-black text-[14px] lg:text-[16px] font-light">Relatórios</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                        <!-- Alertas -->
-
-                    <div class="md:px-3 md:pt-2">
-                        <div class="flex flex-col gap-3">
-                            <a href="alertas.html.html">
-                                <div class="rounded-lg hover:transition-all hover:duration-300
-                                hover:ease-in-out hover:bg-gray-100 p-3 w-full flex items-center cursor-pointer gap-3">
-
-                                <i class="text-black text-[16px] font-light fa-solid fa-circle-exclamation"></i>
-                                <P class="text-black text-[14px] lg:text-[16px] font-light">Alertas</P>
-
-                            </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-
-                        <!-- Administrador -->
-                        <div class="bg-white absolute bottom-0 md:w-48 md:h-24 lg:w-64 lg:h-24 border-gray-300 border-t-[0.1rem] 
-                                border-r-[0.1rem]">
-                            <div class="flex  items-center space-x-3 w-40 lg:w-56 mx-auto bg-gray-200 my-5  rounded-lg p-2">
-                                <div class="flex flex-col rounded-full p-2 h-8 w-8 lg:h-10 lg:w-10 bg-blue-600 justify-center items-center">
-                                    <p class="text-2xl text-white font-bold">A</p>
-
-                                </div>
-                                <div class="">
-                                    <p class="text-xs lg:text-sm font-medium">Administrador</p>
-                                    <p class="text-xs lg:text-sm font-light text-gray-400">Administrador</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-
-                </div>  
-
-                <div class="w-full px-8 mt-8">
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <p class="md:text-xl md:font-bold lg:text-3xl">Produtos</p>
-                            <p class="text-slate-600 md:text-lg md:font-light lg:text-xl">Gerenciamento de inventário</p>
-                        </div>
-
-                        <div>
-                            <button class="bg-slate-600 text-sm font-medium text-white py-3 px-5 rounded-lg cursor-pointer hover:bg-slate-800">+ Novo Prouto</button>
-                        </div>
-
+                    <div>
+                        <label class="text-black font-bold text-lg-center" for="">SKU <span class="text-red-600">*</span></label>
+                        <input class="mt-2 w-full bg-gray-200 p-2 rounded-lg focus:outline-2 focus:outline-blue-600" type="text" name="" id="" placeholder="">
                     </div>
 
                     <div>
-
+                        <label class="text-black font-bold text-lg-center" for="">Código de Barras <span class="text-red-600">*</span></label>
+                        <input class="mt-2 w-full bg-gray-200 p-2 rounded-lg focus:outline-2 focus:outline-blue-600" type="text" name="" id="" placeholder="">
                     </div>
 
                 </div>
 
-                
+                <!-- Nome do produto -->
+                <div class="grid grid-cols-1 mt-4">
+                    <div>
+                        <label class="text-black font-bold text-lg-center" for="">Nome do produto <span class="text-red-600">*</span></label>
+                        <input class="mt-2 w-full bg-gray-200 p-2 rounded-lg focus:outline-2 focus:outline-blue-600" type="text" name="" id="" placeholder="">
+                    </div>
+
+                </div>
+
+                <!-- Descrição dos produtos -->
+                <div class="grid grid-cols-1 mt-4">
+                    <div>
+                        <label class="text-black font-bold text-lg-center" for="">Descrição dos produtos <span class="text-red-600">*</span></label>
+                        <input class="mt-2 w-full bg-gray-200 p-2 rounded-lg focus:outline-2 focus:outline-blue-600" type="text" name="" id="" placeholder="">
+                    </div>
+
+                <!-- Descrição dos produtos -->
+                <div class="grid grid-cols-2 mt-4 gap-4">
+
+                    <div class="relative">
+
+                        <label class="text-black font-bold text-lg-center" for="">Catagoria 
+                            <span class="text-red-600">*</span></label>
+                        <div class="flex justify-between items-center bg-gray-200 w-full rounded-lg">
+                            <button class="p-2 rounded text-left">Selecione</button>
+                        <i class="pr-2 fa-solid fa-angle-down"></i>
+                        </div>
+
+                        <div class="absolute bg-white rounded-lg border-[0.1rem] shadow border-gray-200 w-full mt-1 p-1">
+                            <div class="">
+                                <a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-100">Edit</a>
+                                <a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-100">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
             </div>
 
-
-            </section>
-
-
-
-        </main>
+            
+        </div>
 
         
+
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -183,4 +82,3 @@
     <script src="/script.js"></script>
 </body>
 </html>
-
