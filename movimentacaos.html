@@ -9,7 +9,7 @@
 </head>
 <body class="font-public-sans bg-gray-50">
 
-        <div class="fixed mx-auto rounded-xl inset-0 bg-black bg-opacity-40 flex justify-center items-center p-5">
+        <div class="fixed mx-auto rounded-xl inset-0 bg-black bg-opacity-40 flex justify-center items-center overflow-auto p-5">
 
             <div class="bg-white p-8 rounded-lg w-1/2">
                 <p class="text-2xl mb-4 font-semibold">Novo Produto</p>
@@ -47,21 +47,30 @@
                 <!-- Descrição dos produtos -->
                 <div class="grid grid-cols-2 mt-4 gap-4">
 
-                    <div class="relative">
+                    <div class="relative inline-block">-
 
                         <label class="text-black font-bold text-lg-center" for="">Catagoria 
                             <span class="text-red-600">*</span></label>
-                        <div class="flex justify-between items-center bg-gray-200 w-full rounded-lg">
-                            <button class="p-2 rounded text-left">Selecione</button>
-                        <i class="pr-2 fa-solid fa-angle-down"></i>
-                        </div>
 
-                        <div class="absolute bg-white rounded-lg border-[0.1rem] shadow border-gray-200 w-full mt-1 p-1">
-                            <div class="">
-                                <a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-100">Edit</a>
-                                <a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-100">Delete</a>
+
+                            <div class="flex items-center bg-gray-200 rounded-lg">
+                                <button id="dropdownBtn" class="px-4 py-2 text-left  w-full">
+                                    Selecione</button>
+                                <i class="pr-2 fa-solid fa-angle-down mr-2"></i>
                             </div>
-                        </div>
+
+                            <ul id="dropdownMenu" class="absolute hidden bg-white rounded-lg border-[0.1rem] shadow border-gray-200 w-full mt-1 p-1" >
+
+                                <li><a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-200">Capas de Celular</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-200">Peliculas Protetoras</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-200">Cabos e Carregadores</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-200">Produtos para TV</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-200">Informatica</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-200">Fones de Ouvido</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-200">Smartwatch</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-200">Gaming</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm rounded-lg text-gray-700 font-medium hover:bg-gray-200">Acessorios Diversos</a></li>
+                            </ul>
                     </div>
 
                     

@@ -35,3 +35,33 @@ new Chart(ctx, {
     }
   }
 });
+
+// PASSO 1: Obtenha o botão (o elemento em que você clica)
+const dropdownBtn = document.getElementById("dropdownBtn")
+
+// PASSO 2: Obtenha o menu suspenso (a lista oculta)
+const dropdownMenu = document.getElementById("dropdownMenu")
+
+// PASSO 3: Ao clicar no botão, mostre ou oculte o menu
+dropdownBtn.addEventListener('click', function () {
+  dropdownMenu.classList.toggle("hidden")
+})
+
+dropdownMenu.addEventListener('click', function(event){
+  if(!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)){
+  dropdownMenu.classList.add("hidden")
+    
+  }
+})
+
+const options = dropdownMenu.querySelectorAll("li");
+
+options.forEach(function(option) {
+  option.addEventListener("click", function() {
+    // Change button text to the option selected
+    dropdownBtn.textContent = option.textContent;
+
+    // Hide dropdown after selecting
+    dropdownMenu.classList.add("hidden");
+  });
+});
