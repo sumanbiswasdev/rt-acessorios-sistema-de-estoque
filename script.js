@@ -36,32 +36,129 @@ new Chart(ctx, {
   }
 });
 
-// PASSO 1: Obtenha o botão (o elemento em que você clica)
-const dropdownBtn = document.getElementById("dropdownBtn")
+// Catagoria de produtos
 
-// PASSO 2: Obtenha o menu suspenso (a lista oculta)
-const dropdownMenu = document.getElementById("dropdownMenu")
+const dropdownBtn = document.getElementById("dropdownBtn");
+const dropdownMenu = document.getElementById("dropdownMenu");
 
-// PASSO 3: Ao clicar no botão, mostre ou oculte o menu
-dropdownBtn.addEventListener('click', function () {
-  dropdownMenu.classList.toggle("hidden")
-})
+dropdownBtn.addEventListener("click", function () {
+  dropdownMenu.classList.toggle("hidden");
+});
 
-dropdownMenu.addEventListener('click', function(event){
-  if(!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)){
-  dropdownMenu.classList.add("hidden")
-    
+document.addEventListener("click", function (event) {
+  if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+    dropdownMenu.classList.add("hidden");
   }
-})
+});
 
 const options = dropdownMenu.querySelectorAll("li");
 
 options.forEach(function(option) {
   option.addEventListener("click", function() {
-    // Change button text to the option selected
+
     dropdownBtn.textContent = option.textContent;
 
-    // Hide dropdown after selecting
     dropdownMenu.classList.add("hidden");
   });
 });
+
+// fornecedor
+
+const fornecedorBtn = document.getElementById("fornecedorBtn")
+const listadeFornecedor = document.getElementById("listadeFornecedor")
+
+fornecedorBtn.addEventListener("click", function (){
+  listadeFornecedor.classList.toggle("hidden")
+})
+
+
+document.addEventListener('click', function (event1){
+  if(!fornecedorBtn.contains(event1.target) && !listadeFornecedor.contains(event1.target)){
+    listadeFornecedor.classList.add("hidden")
+  }
+})
+
+
+const nomesdoFornecedor = listadeFornecedor.querySelectorAll("li")
+nomesdoFornecedor.forEach(function(fornecedor){
+  fornecedor.addEventListener('click', function(){
+    fornecedorBtn.textContent = fornecedor.textContent
+    listadeFornecedor.classList.add("hidden")
+  })
+})
+
+// Estoque mínimo
+
+let inputBox = document.getElementById("minStock");
+let btnUp = document.getElementById("btnUp");
+let btnDown = document.getElementById("btnDown");
+
+btnUp.addEventListener("click", function () {
+
+    let currentValue = Number(inputBox.value);
+
+    currentValue = currentValue + 1;
+
+    inputBox.value = currentValue;
+});
+
+
+btnDown.addEventListener("click", function () {
+
+    let currentValue = Number(inputBox.value);
+
+    if (currentValue > 0) {
+        currentValue = currentValue - 1;
+    }
+
+    inputBox.value = currentValue;
+});
+
+// Estoque Atual
+
+let estoueInput = document.getElementById("estoueInput");
+let estoueUp = document.getElementById("estoueUp");
+let estoueDown = document.getElementById("estoueDown");
+
+estoueUp.addEventListener("click", function () {
+
+    let currentValue = Number(estoueInput.value);
+
+    currentValue = currentValue + 1;
+
+    estoueInput.value = currentValue;
+});
+
+
+estoueDown.addEventListener("click", function () {
+
+    let currentValue = Number(estoueInput.value);
+
+    if (currentValue > 0) {
+        currentValue = currentValue - 1;
+    }
+
+    estoueInput.value = currentValue;
+});
+
+// Preço Unitários
+
+let unitariosInput = document.getElementById("unitariosInput")
+let unitariosUp = document.getElementById("unitariosUp")
+let unitariosDown = document.getElementById("unitariosDown")
+
+unitariosUp.addEventListener('click', function() {
+  let currentValue = Number(unitariosInput.value)
+  currentValue = currentValue + 1
+  unitariosInput.value = currentValue
+})
+
+
+unitariosDown.addEventListener('click', function() {
+  let currentValue = Number(unitariosInput.value)
+  if(currentValue > 0 ){
+    currentValue = currentValue - 1
+
+  }
+  unitariosInput.value = currentValue
+})
