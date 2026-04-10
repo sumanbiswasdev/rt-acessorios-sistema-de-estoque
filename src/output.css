@@ -1,5 +1,5 @@
 /*! tailwindcss v4.2.2 | MIT License | https://tailwindcss.com */
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -63,7 +63,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --font-public-sans: "Public Sans", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
   }
 }
 @layer base {
@@ -652,8 +652,8 @@
   .text-left {
     text-align: left;
   }
-  .font-public-sans {
-    font-family: var(--font-public-sans);
+  .font-poppins {
+    font-family: var(--font-poppins);
   }
   .text-2xl {
     font-size: var(--text-2xl);
