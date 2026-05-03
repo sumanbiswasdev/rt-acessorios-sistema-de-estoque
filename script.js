@@ -168,4 +168,58 @@ unitariosDown.addEventListener('click', function() {
 
 // ========================================================================================================================
 
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+function openModal() {
+  const openModal = document.getElementById('modal').classList.remove('hidden')
+}
+
+function closeModal(){
+  const closeModal = document.getElementById('modal').classList.add('hidden')
+}
+
+function displayproducts(){
+  const table = document.getElementById('productTable')
+
+  table.innerHTML = ""
+
+  products.forEach((product, index) =>{
+    table.innerHTML += `
+      <tr class="border-b-[0.2rem] border-gray-100 hover:bg-gray-100">
+          <td class="px-6 py-4">${product.sku}</td>
+          <td class="px-6 py-4">${product.barcode}</td>
+          <td class="px-6 py-4">${product.name}</td>
+      </tr>
+    `
+  })
+}
+
+displayproducts()
+
+function addProduct(){
+  const sku = document.getElementById('sku').value.trim()
+  const barcode = document.getElementById('barcode').value.trim()
+  const name = document.getElementById('name').value.trim()
+
+  if(!sku || !barcode || !name){
+    return ('Preencha todos os campos')
+    alert
+  }
+
+  const newProdut = {sku, barcode, name}
+
+  products.push(newProdut)
+
+  localStorage.setItem("products", JSON.stringify(products));
+
+  displayproducts()
+
+  closeModal()
+
+  document.getElementById('sku').value = ""
+  document.getElementById('barcode').value = ""
+  document.getElementById('name').value = ""
+
+
+}
 
