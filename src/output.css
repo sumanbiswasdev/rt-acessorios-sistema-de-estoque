@@ -517,6 +517,10 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 0.1rem;
   }
+  .border-b-\[0\.2rem\] {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 0.2rem;
+  }
   .border-none {
     --tw-border-style: none;
     border-style: none;
@@ -818,6 +822,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-50);
+      }
+    }
+  }
+  .hover\:bg-gray-100 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-100);
       }
     }
   }
