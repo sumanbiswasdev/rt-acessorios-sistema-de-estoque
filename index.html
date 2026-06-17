@@ -1,90 +1,246 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RT ACESSÓRIOS - Sistema de Gerenciamento de Estoque</title>
-    <link rel="shortcut icon" href="/logo/logo_icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/src/output.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coneccta Comércio — Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+
+    body {
+      background-color: #0f172a;
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(99,102,241,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(16,185,129,0.06) 0%, transparent 50%);
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+    }
+
+    .input-field {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: white;
+      transition: all 0.2s;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: #6366f1;
+      background: rgba(99,102,241,0.08);
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+    }
+
+    .input-field::placeholder { color: rgba(255,255,255,0.3); }
+
+    .btn-login {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      transition: all 0.2s;
+    }
+
+    .btn-login:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 25px rgba(99,102,241,0.4);
+    }
+
+    .btn-login:active { transform: translateY(0); }
+
+    .btn-login:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .logo-circle {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      box-shadow: 0 8px 32px rgba(99,102,241,0.4);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up { animation: fadeUp 0.5s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+
+    #error-msg {
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.3);
+      color: #fca5a5;
+    }
+
+    #loading-spinner {
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      animation: spin 0.6s linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
-<body class="font-poppins bg-gray-50">
+<body class="min-h-screen flex items-center justify-center p-4">
 
-        <main>
+  <div class="w-full max-w-md">
 
-            <!-- RT ACESSÓRIOS -->
-            <section>
-                <div class="container mx-auto">
+    <!-- Logo -->
+    <div class="text-center mb-8 fade-up">
+      <div class="mx-auto mb-4" style="width: 120px; height: 120px; border-radius: 16px; overflow: hidden;">
+        <img src="/logo/logo.png" alt="Coneccta Comércio" style="width: 100%; height: 100%; object-fit: contain;">
+      </div>
+      <h1 class="text-white text-2xl font-bold">Coneccta Comércio</h1>
+      <p class="text-slate-400 text-sm mt-1">Sistema de Gestão de Estoque</p>
+    </div>
 
-                    <div class="flex flex-col justify-center items-center tablet:mt-36 laptop:mt-12 desktop:mt-20">
-                        <div class="my-5">
-                            <img class="mx-auto tablet:w-36 desktop:w-40" src="/logo/logo.png" alt="rt-logo">
-                        </div>
+    <!-- Card de login -->
+    <div class="card rounded-2xl p-8 fade-up delay-1">
+      <h2 class="text-white text-lg font-semibold mb-1">Entrar na sua conta</h2>
+      <p class="text-slate-400 text-sm mb-6">Acesse o estoque da sua loja</p>
 
-                        <div class="text-center tablet:mt-2">
-                            <h1 class="text-3xl font-bold text-gray-800">RT ACESSÓRIOS</h1>
-                            <p class="text-lg text-gray-700 font-light">Sistema de Gerenciamento de Estoque</p>
-                        </div>
-                    </div>
+      <!-- Mensagem de erro -->
+      <div id="error-msg" class="hidden rounded-lg px-4 py-3 text-sm mb-4">
+        <span id="error-text"></span>
+      </div>
 
-                    <!-- Entrar no Sitema -->
+      <!-- Formulário -->
+      <div class="space-y-4">
+        <div class="fade-up delay-2">
+          <label class="text-slate-300 text-sm font-medium block mb-2">E-mail</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="seuemail@gmail.com"
+            class="input-field w-full px-4 py-3 rounded-xl text-sm"
+          />
+        </div>
 
-                    <div class="bg-white p-8 tablet:mt-12 rounded-2xl shadow-md border-[0.1rem] border-slate-300 
-                    w-[400px] md:w-[500px] lg:w-[600px] mx-auto">
+        <div class="fade-up delay-2">
+          <label class="text-slate-300 text-sm font-medium block mb-2">Senha</label>
+          <div class="relative">
+            <input
+              id="password"
+              type="password"
+              placeholder="••••••••"
+              class="input-field w-full px-4 py-3 rounded-xl text-sm pr-12"
+            />
+            <button
+              id="toggle-password"
+              type="button"
+              class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors"
+            >
+              <svg id="eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
 
-                        <div class="space-y-1">
-                            <p class="text-lg font-medium">Entrar no Sistema</p>
-                            <p class="text-sm md:text-lg font-light text-gray-700">Digite suas credenciais para acessar o sistema</p>
-                        </div>
+        <div class="fade-up delay-3 pt-2">
+          <button
+            id="btn-login"
+            class="btn-login w-full text-white font-semibold py-3 rounded-xl text-sm"
+          >
+            Entrar
+          </button>
+        </div>
+      </div>
+    </div>
 
-                        <div class="flex flex-col gap-6 w-full">
+    <!-- Rodapé -->
+    <p class="text-center text-slate-600 text-xs mt-6 fade-up delay-3">
+      Desenvolvido por Lucas Dias Torto © 2025
+    </p>
 
-                            <!-- Usuário -->
-                            <div class="flex flex-col gap-2 mt-5">
-                                
-                                <label for="username" class="text-lg font-medium">Usuário</label>
+  </div>
 
-                                <div class="relative">
-                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <!-- User Icon (Heroicons) -->
-                                    <ion-icon name="person-outline"></ion-icon>
-                                </div>
-                                <input type="text" id="username" class="w-full pl-10 pr-3 py-2 bg-gray-100 border-transparent rounded-md text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Digite seu usuário">
-                                </div>
-                            </div>
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-                            <!-- Senha -->
-                            <div class="flex flex-col gap-2 ">
-                                
-                                <label for="username" class="text-lg font-medium">Senha</label>
+    const SUPABASE_URL = 'https://wrajtiizvkvtzqmoicbm.supabase.co'
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndyYWp0aWl6dmt2dHpxbW9pY2JtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyOTg4NTksImV4cCI6MjA5Mzg3NDg1OX0.pjbTkVx_KGs2ZDv_vQJOPc4ODgwi0q04qA5o2eMSqLA'
 
-                                <div class="relative">
-                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <!-- User Icon (Heroicons) -->
-                                    <ion-icon name="lock-closed-outline"></ion-icon>
-                                </div>
-                                <input type="text" id="username" class="w-full pl-10 pr-3 py-2 bg-gray-100 border-transparent rounded-md text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Digite seu senha">
-                                </div>
-                            </div>
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-                            <a class="text-white cursor-pointer" href="dashboard.html">
-                                    <button class="w-full mt-5 bg-slate-700 text-center py-2 rounded-lg hover:bg-slate-800 
-                                    hover:transition-all ease-in-out duration-300 cursor-pointer">Entrar</button></a>
+    // Verificar se já está logado
+    const { data: { session } } = await supabase.auth.getSession()
+    if (session) {
+      window.location.href = 'selecionar-loja.html'
+    }
 
-                            <!-- Todos os direitos reservados -->
-                            <div class="tablet:flex md:justify-center md:items-center gap-1">
-                                <p class="text-center text-sm">© 2026 RT Acessórios.</p>
-                                <p class="text-center text-sm">Todos os direitos reservados.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    // Toggle senha visível
+    const toggleBtn = document.getElementById('toggle-password')
+    const passwordInput = document.getElementById('password')
+    toggleBtn.addEventListener('click', () => {
+      const isPassword = passwordInput.type === 'password'
+      passwordInput.type = isPassword ? 'text' : 'password'
+    })
 
-            </section>
-        </main>
-    
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://kit.fontawesome.com/9898c47017.js" crossorigin="anonymous"></script>
-    <script src="/script.js"></script>
+    // Login ao apertar Enter
+    document.getElementById('password').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') fazerLogin()
+    })
+    document.getElementById('email').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') fazerLogin()
+    })
+
+    // Botão de login
+    document.getElementById('btn-login').addEventListener('click', fazerLogin)
+
+    async function fazerLogin() {
+      const email = document.getElementById('email').value.trim()
+      const password = document.getElementById('password').value
+
+      const errorMsg = document.getElementById('error-msg')
+      const errorText = document.getElementById('error-text')
+      const btn = document.getElementById('btn-login')
+
+      // Esconder erro anterior
+      errorMsg.classList.add('hidden')
+
+      // Validação básica
+      if (!email || !password) {
+        errorText.textContent = 'Preencha o e-mail e a senha.'
+        errorMsg.classList.remove('hidden')
+        return
+      }
+
+      // Loading
+      btn.disabled = true
+      btn.innerHTML = '<span id="loading-spinner"></span> Entrando...'
+
+      const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+
+      if (error) {
+        btn.disabled = false
+        btn.innerHTML = 'Entrar'
+
+        if (error.message.includes('Invalid login')) {
+          errorText.textContent = 'E-mail ou senha incorretos. Tente novamente.'
+        } else {
+          errorText.textContent = 'Erro ao entrar: ' + error.message
+        }
+        errorMsg.classList.remove('hidden')
+        return
+      }
+
+      // Sucesso — redireciona para o dashboard
+      window.location.href = 'selecionar-loja.html'
+    }
+  </script>
+
 </body>
 </html>

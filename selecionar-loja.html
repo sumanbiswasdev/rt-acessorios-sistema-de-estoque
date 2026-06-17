@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coneccta Comércio — Selecionar Loja</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Poppins', sans-serif; box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: #0f172a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .logo-circle {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            box-shadow: 0 8px 32px rgba(99,102,241,0.4);
+        }
+
+        h1 { color: white; font-size: 24px; font-weight: 700; margin: 0 0 4px; }
+        .subtitle { color: #94a3b8; font-size: 14px; margin: 0 0 32px; }
+        .greeting { color: white; font-size: 20px; font-weight: 600; margin: 0 0 4px; }
+        .greeting-sub { color: #94a3b8; font-size: 14px; margin: 0 0 24px; }
+
+        .lojas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .loja-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .loja-card:hover {
+            background: rgba(99,102,241,0.12);
+            border-color: rgba(99,102,241,0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(99,102,241,0.2);
+        }
+
+        .loja-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .loja-nome {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 4px;
+        }
+
+        .loja-desc {
+            color: #94a3b8;
+            font-size: 13px;
+            margin: 0 0 16px;
+        }
+
+        .loja-link {
+            color: #818cf8;
+            font-size: 13px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .btn-logout {
+            background: none;
+            border: none;
+            color: #64748b;
+            font-size: 13px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 0 auto;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: color 0.2s;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-logout:hover { color: #f87171; }
+
+        #status {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .spinner {
+            width: 32px;
+            height: 32px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-top-color: #6366f1;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            margin: 0 auto 12px;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Logo -->
+        <div class="logo-circle" style="background: none; box-shadow: none; width: 120px; height: 120px; border-radius: 16px; overflow: hidden;">
+            <img src="/logo/logo.png" alt="Coneccta Comércio" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+
+        <h1>Coneccta Comércio</h1>
+        <p class="subtitle">Sistema de Gestão de Estoque</p>
+
+        <p class="greeting">Olá, <span id="nome-admin">Admin</span>!</p>
+        <p class="greeting-sub">Selecione a loja que deseja acessar</p>
+
+        <!-- Status / loading -->
+        <div id="status">
+            <div class="spinner"></div>
+            Carregando lojas...
+        </div>
+
+        <!-- Grid de lojas -->
+        <div class="lojas-grid" id="lojas-grid" style="display:none;"></div>
+
+        <!-- Logout -->
+        <button class="btn-logout" id="btn-logout">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+            </svg>
+            Sair da conta
+        </button>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/9898c47017.js" crossorigin="anonymous"></script>
+
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+        const supabase = createClient(
+            'https://wrajtiizvkvtzqmoicbm.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndyYWp0aWl6dmt2dHpxbW9pY2JtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyOTg4NTksImV4cCI6MjA5Mzg3NDg1OX0.pjbTkVx_KGs2ZDv_vQJOPc4ODgwi0q04qA5o2eMSqLA'
+        )
+
+        // ── Verifica sessão ─────────────────────────────────────
+        const { data: { session } } = await supabase.auth.getSession()
+        if (!session) {
+            window.location.href = 'index.html'
+        } else {
+
+        // Mostra nome
+        const nome = session.user.user_metadata?.nome || session.user.email
+        document.getElementById('nome-admin').textContent = nome
+
+        // ── Carrega lojas ───────────────────────────────────────
+        const { data: lojas, error } = await supabase
+            .from('lojas')
+            .select('id, nome')
+            .order('nome')
+
+        const statusEl = document.getElementById('status')
+        const gridEl = document.getElementById('lojas-grid')
+
+        if (error || !lojas || lojas.length === 0) {
+            statusEl.textContent = 'Nenhuma loja encontrada. Verifique o banco de dados.'
+        } else {
+
+        statusEl.style.display = 'none'
+        gridEl.style.display = 'grid'
+
+        const icones = ['🏪', '🛍️', '🏬', '🏷️']
+
+        gridEl.innerHTML = lojas.map((loja, i) => `
+            <div class="loja-card" onclick="selecionarLoja('${loja.id}', '${loja.nome}')">
+                <span class="loja-icon">${icones[i % icones.length]}</span>
+                <p class="loja-nome">${loja.nome}</p>
+                <p class="loja-desc">Clique para acessar o estoque</p>
+                <span class="loja-link">Acessar →</span>
+            </div>
+        `).join('')
+
+        // ── Selecionar loja ─────────────────────────────────────
+        window.selecionarLoja = function(lojaId, lojaNome) {
+            sessionStorage.setItem('loja_id', lojaId)
+            sessionStorage.setItem('loja_nome', lojaNome)
+            window.location.href = 'dashboard.html'
+        }
+
+        } // fim else
+
+        // ── Logout ──────────────────────────────────────────────
+        document.getElementById('btn-logout').addEventListener('click', async () => {
+            await supabase.auth.signOut()
+            sessionStorage.clear()
+            window.location.href = 'index.html'
+        })
+
+        } // fim else sessão
+
+    </script>
+
+</body>
+</html>

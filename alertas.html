@@ -3,99 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerente de Estoque: Sistema de Gerenciamento de Estoque</title>
+    <title>Coneccta Comércio — Sistema de Estoque</title>
     <link rel="shortcut icon" href="/logo/logo_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="src/output.css">
 </head>
-<body class="font-public-sans bg-gray-50">
+<body class="font-poppins bg-gray-50">
 
     <div class="flex h-screen">
 
         <aside class="flex flex-col w-64 bg-white border-r border-gray-200">
 
-            <!-- logo / Sistema de Estoque -->
             <div class="p-6 border-b border-gray-200">
                 <img class="w-28 mx-auto mb-2" src="/logo/logo.png" alt="logo">
-                <h1 class="text-center text-lg font-medium text-gray-400">Sistema de Estoque</h1>
+                <h1 class="text-center text-lg font-medium text-blue-600">Sistema de Estoque</h1>
             </div>
 
-            <!-- Navegação -->
             <nav class="flex-1 px-4 space-y-1">
-
-                <!-- Dashboard -->
                 <a href="dashboard.html">
-                    <div class="flex items-center space-x-3 cursor-pointer mt-5
-                        hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="flex items-center space-x-3 cursor-pointer mt-5 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-black fa-solid fa-cube"></i>
-                        <p class="text-black text-lg font-light">Dashborad</p>
+                        <p class="text-black text-lg font-light">Dashboard</p>
                     </div>
                 </a>
-
-                <!-- Produtos -->
                 <a href="produtos.html">
-                    <div class="flex items-center space-x-3 cursor-pointer mt-2
-                        hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="flex items-center space-x-3 cursor-pointer mt-2 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-black fa-solid fa-box"></i>
                         <p class="text-black text-lg font-light">Produtos</p>
                     </div>
                 </a>
-
-                <!-- Movimentações -->
                 <a href="movimentacaos.html">
-                    <div class="flex items-center space-x-3 cursor-pointer mt-2
-                        hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="flex items-center space-x-3 cursor-pointer mt-2 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-black fa-solid fa-chart-simple"></i>
                         <p class="text-black text-lg font-light">Movimentações</p>
                     </div>
                 </a>
-
-                <!-- Fornecedores -->
                 <a href="fornecedores.html">
-                    <div class="mt-2 flex items-center space-x-3 cursor-pointer
-                        hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="mt-2 flex items-center space-x-3 cursor-pointer hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-black fa-solid fa-user-group"></i>
                         <p class="text-black text-lg font-light">Fornecedores</p>
                     </div>
                 </a>
-
-                <!-- Relatórios -->
                 <a href="relatorios.html">
-                    <div class="mt-2 flex items-center space-x-3 cursor-pointer
-                        hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="mt-2 flex items-center space-x-3 cursor-pointer hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-black fa-solid fa-file"></i>
                         <p class="text-black text-lg font-light">Relatórios</p>
                     </div>
                 </a>
-
-                <!-- Alertas — ativo -->
                 <a href="alertas.html">
-                    <div class="mt-2 flex items-center space-x-3 cursor-pointer
-                        bg-blue-600 hover:bg-blue-700 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="mt-2 flex items-center space-x-3 cursor-pointer bg-blue-600 hover:bg-blue-700 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-white fa-solid fa-circle-exclamation"></i>
                         <p class="text-white text-lg font-light">Alertas</p>
                     </div>
                 </a>
-
             </nav>
 
-            <!-- Usuário -->
-            <div class="border-t p-4 border-gray-200 flex items-center">
-                <div class="flex items-center gap-3 p-4 hover:bg-gray-200 w-full rounded-lg hover:transition-all hover:duration-300 hover:ease-in-out cursor-pointer">
-                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm">
-                        <p>A</p>
+            <!-- Usuário + logout -->
+            <div class="border-t p-4 border-gray-200">
+                <div class="flex items-center gap-3 p-4 bg-gray-50 w-full rounded-lg mb-2">
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm flex-shrink-0">
+                        <p id="user-inicial">A</p>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="text-sm font-bold text-slate-800 leading-tight">Administrador</span>
-                        <span class="text-xs text-slate-400">Administrador</span>
+                    <div class="flex flex-col overflow-hidden">
+                        <span id="user-email" class="text-sm font-bold text-slate-800 leading-tight truncate">Carregando...</span>
+                        <span id="loja-nome-sidebar" class="text-xs text-slate-400 truncate">--</span>
                     </div>
                 </div>
+                <button onclick="window.location.href='selecionar-loja.html'"
+                    class="flex items-center gap-3 px-3 py-2 bg-blue-600 hover:bg-blue-700 w-full rounded-lg transition-all duration-300 cursor-pointer text-white mb-1">
+                    <i class="fa-solid fa-store text-xs"></i>
+                    <span class="text-sm font-medium">Trocar loja</span>
+                </button>
+                <button id="btn-logout" class="flex items-center gap-3 px-3 py-2 hover:bg-red-50 w-full rounded-lg transition-all duration-300 cursor-pointer text-red-500 hover:text-red-600">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="text-sm font-medium">Sair da conta</span>
+                </button>
             </div>
 
         </aside>
 
         <main class="flex-1 p-8 overflow-y-auto">
 
-            <!-- Cabeçalho -->
             <header class="mb-8">
                 <h2 class="text-3xl font-bold">Alertas</h2>
                 <p class="text-slate-600 text-lg font-light">Produtos com estoque abaixo do nível mínimo</p>
@@ -104,31 +91,28 @@
             <!-- Cards de resumo -->
             <div class="grid w-full tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-3 gap-5 mb-8">
 
-                <!-- Total de Alertas -->
                 <div class="bg-white px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
                     <div class="flex justify-between items-center">
                         <p class="text-lg text-gray-500 font-medium">Total de Alertas</p>
                         <i class="text-red-600 fa-solid fa-circle-exclamation"></i>
                     </div>
                     <div class="mt-1">
-                        <p class="text-[21px] font-bold pt-5 text-red-600" id="totalAlertas">0</p>
+                        <p class="text-[21px] font-bold pt-5 text-red-600" id="totalAlertas">--</p>
                         <p class="text-sm text-gray-400 font-light">Produtos abaixo do mínimo</p>
                     </div>
                 </div>
 
-                <!-- Críticos -->
                 <div class="bg-white px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
                     <div class="flex justify-between items-center">
                         <p class="text-lg text-gray-500 font-medium">Críticos</p>
                         <i class="text-orange-500 fa-solid fa-triangle-exclamation"></i>
                     </div>
                     <div class="mt-1">
-                        <p class="text-[21px] font-bold pt-5 text-orange-500" id="totalCriticos">0</p>
+                        <p class="text-[21px] font-bold pt-5 text-orange-500" id="totalCriticos">--</p>
                         <p class="text-sm text-gray-400 font-light">Estoque zerado ou quase</p>
                     </div>
                 </div>
 
-                <!-- Última Verificação -->
                 <div class="bg-white px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
                     <div class="flex justify-between items-center">
                         <p class="text-lg text-gray-500 font-medium">Última Verificação</p>
@@ -148,8 +132,7 @@
                 <div class="flex justify-between items-center mb-5">
                     <p class="text-lg font-medium">Produtos em Alerta</p>
                     <button onclick="verificarAlertas()"
-                        class="bg-blue-600 hover:bg-blue-700 hover:transition hover:ease-in-out hover:duration-300
-                        text-white text-sm font-light px-4 py-2 rounded-lg cursor-pointer">
+                        class="bg-blue-600 hover:bg-blue-700 transition-all text-white text-sm font-light px-4 py-2 rounded-lg cursor-pointer">
                         <i class="fa-solid fa-rotate-right mr-2"></i>Atualizar
                     </button>
                 </div>
@@ -165,17 +148,21 @@
                                 <th class="pb-3 text-gray-500 font-medium">Status</th>
                             </tr>
                         </thead>
-                        <tbody id="tabelaAlertas">
-                            <!-- Preenchido pelo JS -->
-                        </tbody>
+                        <tbody id="tabelaAlertas"></tbody>
                     </table>
                 </div>
 
                 <!-- Estado vazio -->
-                <div id="semAlertas" class="flex flex-col items-center justify-center py-16 text-gray-400">
+                <div id="semAlertas" class="hidden flex-col items-center justify-center py-16 text-gray-400">
                     <i class="fa-solid fa-circle-check text-green-500 text-5xl mb-4"></i>
                     <p class="text-lg font-medium text-green-600">Tudo certo por aqui!</p>
                     <p class="text-sm font-light">Nenhum produto abaixo do estoque mínimo.</p>
+                </div>
+
+                <!-- Carregando -->
+                <div id="carregando" class="flex flex-col items-center justify-center py-16 text-gray-400">
+                    <i class="fa-solid fa-spinner fa-spin text-3xl mb-4 text-blue-500"></i>
+                    <p class="text-sm">Verificando alertas...</p>
                 </div>
 
             </div>
@@ -187,8 +174,100 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/9898c47017.js" crossorigin="anonymous"></script>
-    <script src="/script.js"></script>
 
-    <script src="/alertas.js"></script>
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+        const supabase = createClient(
+            'https://wrajtiizvkvtzqmoicbm.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndyYWp0aWl6dmt2dHpxbW9pY2JtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyOTg4NTksImV4cCI6MjA5Mzg3NDg1OX0.pjbTkVx_KGs2ZDv_vQJOPc4ODgwi0q04qA5o2eMSqLA'
+        )
+
+        // ── Sessão ──────────────────────────────────────────────
+        const { data: { session } } = await supabase.auth.getSession()
+        if (!session) {
+            window.location.href = 'index.html'
+        } else {
+            const nome = session.user.user_metadata?.nome || session.user.email
+            document.getElementById('user-email').textContent = nome
+            document.getElementById('user-inicial').textContent = (nome || 'U')[0].toUpperCase()
+        }
+
+
+        // ── Loja selecionada ────────────────────────────────────
+        const lojaId = sessionStorage.getItem('loja_id')
+        const lojaNome = sessionStorage.getItem('loja_nome')
+        if (!lojaId) { window.location.href = 'selecionar-loja.html' }
+        if (lojaNome) {
+            const el = document.getElementById('loja-nome-sidebar')
+            if (el) el.textContent = lojaNome
+        }
+
+        document.getElementById('btn-logout').addEventListener('click', async () => {
+            await supabase.auth.signOut()
+            sessionStorage.clear()
+            window.location.href = 'index.html'
+        })
+
+        // ── Verificar alertas ───────────────────────────────────
+        window.verificarAlertas = async function() {
+            document.getElementById('carregando').classList.remove('hidden')
+            document.getElementById('carregando').classList.add('flex')
+            document.getElementById('semAlertas').classList.add('hidden')
+            document.getElementById('tabelaAlertas').innerHTML = ''
+
+            const { data: produtos, error } = await supabase
+                .from('produtos')
+                .select('*')
+                .eq('loja_id', lojaId)
+                .order('quantidade', { ascending: true })
+
+            if (error) {
+                console.error(error)
+                document.getElementById('carregando').classList.add('hidden')
+                return
+            }
+
+            const emAlerta = produtos.filter(p => p.quantidade < p.estoque_minimo)
+            const criticos = emAlerta.filter(p => p.quantidade <= 0)
+
+            document.getElementById('totalAlertas').textContent = emAlerta.length
+            document.getElementById('totalCriticos').textContent = criticos.length
+            document.getElementById('ultimaVerificacao').textContent =
+                new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
+
+            document.getElementById('carregando').classList.add('hidden')
+            document.getElementById('carregando').classList.remove('flex')
+
+            const tbody = document.getElementById('tabelaAlertas')
+
+            if (emAlerta.length === 0) {
+                document.getElementById('semAlertas').classList.remove('hidden')
+                document.getElementById('semAlertas').classList.add('flex')
+                return
+            }
+
+            tbody.innerHTML = emAlerta.map(p => {
+                const critico = p.quantidade <= 0
+                const badge = critico
+                    ? `<span class="bg-red-100 text-red-600 text-xs font-medium px-2 py-1 rounded-full">Crítico</span>`
+                    : `<span class="bg-orange-100 text-orange-500 text-xs font-medium px-2 py-1 rounded-full">Baixo</span>`
+
+                return `
+                <tr class="border-b border-gray-100 hover:bg-gray-50">
+                    <td class="py-3 font-medium">${p.nome}</td>
+                    <td class="py-3 text-gray-500">${p.categoria || '—'}</td>
+                    <td class="py-3 ${critico ? 'text-red-600 font-bold' : 'text-orange-500 font-medium'}">${p.quantidade}</td>
+                    <td class="py-3 text-gray-500">${p.estoque_minimo}</td>
+                    <td class="py-3">${badge}</td>
+                </tr>`
+            }).join('')
+        }
+
+        // ── Iniciar ─────────────────────────────────────────────
+        await verificarAlertas()
+
+    </script>
+
 </body>
 </html>

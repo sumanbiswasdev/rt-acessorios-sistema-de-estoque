@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerente de Estoque: Sistema de Gerenciamento de Estoque</title>
+    <title>Coneccta Comércio — Sistema de Estoque</title>
     <link rel="shortcut icon" href="/logo/logo_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="src/output.css">
 </head>
@@ -13,81 +13,73 @@
 
         <aside class="flex flex-col w-64 bg-white border-r border-gray-200">
 
-            <!-- logo / Sistema de Estoque -->
             <div class="p-6 border-b border-gray-200">
                 <img class="w-28 mx-auto mb-2" src="/logo/logo.png" alt="logo">
-                <h1 class="text-center text-lg font-medium text-gray-400">Sistema de Estoque</h1>
+                <h1 class="text-center text-lg font-medium text-blue-600">Sistema de Estoque</h1>
             </div>
 
-            <!-- Nav -->
             <nav class="flex-1 px-4 space-y-1">
-
                 <a href="dashboard.html">
-                    <div class="flex items-center space-x-3 cursor-pointer mt-5
-                         hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="flex items-center space-x-3 cursor-pointer mt-5 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-black fa-solid fa-cube"></i>
-                        <p class="text-black text-lg font-light">Dashborad</p>
+                        <p class="text-black text-lg font-light">Dashboard</p>
                     </div>
                 </a>
-
                 <a href="produtos.html">
-                    <div class="flex items-center space-x-3 cursor-pointer mt-2
-                    hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="flex items-center space-x-3 cursor-pointer mt-2 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-black fa-solid fa-box"></i>
                         <p class="text-black text-lg font-light">Produtos</p>
                     </div>
                 </a>
-
                 <a href="movimentacaos.html">
-                    <div class="flex items-center space-x-3 cursor-pointer mt-2
-                    hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="flex items-center space-x-3 cursor-pointer mt-2 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-black fa-solid fa-chart-simple"></i>
                         <p class="text-black text-lg font-light">Movimentações</p>
                     </div>
                 </a>
-
                 <a href="fornecedores.html">
-                    <div class="mt-2 flex items-center space-x-3 cursor-pointer
-                    hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="mt-2 flex items-center space-x-3 cursor-pointer hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-black fa-solid fa-user-group"></i>
                         <p class="text-black text-lg font-light">Fornecedores</p>
                     </div>
                 </a>
-
-                <!-- Relatórios - ativo -->
                 <a href="relatorios.html">
-                    <div class="mt-2 flex items-center space-x-3 cursor-pointer
-                    bg-blue-600 hover:bg-blue-700 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="mt-2 flex items-center space-x-3 cursor-pointer bg-blue-600 hover:bg-blue-700 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-white fa-solid fa-file"></i>
                         <p class="text-white text-lg font-light">Relatórios</p>
                     </div>
                 </a>
-
                 <a href="alertas.html">
-                    <div class="mt-2 flex items-center space-x-3 cursor-pointer
-                    hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                    <div class="mt-2 flex items-center space-x-3 cursor-pointer hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
                         <i class="text-black fa-solid fa-circle-exclamation"></i>
                         <p class="text-black text-lg font-light">Alertas</p>
                     </div>
                 </a>
-
             </nav>
 
-            <div class="border-t p-4 border-gray-200 flex items-center">
-                <div class="flex items-center gap-3 p-4 hover:bg-gray-200 w-full rounded-lg hover:transition-all hover:duration-300 hover:ease-in-out cursor-pointer">
-                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm">
-                        <p>A</p>
+            <div class="border-t p-4 border-gray-200">
+                <div class="flex items-center gap-3 p-4 bg-gray-50 w-full rounded-lg mb-2">
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm flex-shrink-0">
+                        <p id="user-inicial">A</p>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="text-sm font-bold text-slate-800 leading-tight">Administrador</span>
-                        <span class="text-xs text-slate-400">Administrador</span>
+                    <div class="flex flex-col overflow-hidden">
+                        <span id="user-email" class="text-sm font-bold text-slate-800 leading-tight truncate">Carregando...</span>
+                        <span id="loja-nome-sidebar" class="text-xs text-slate-400 truncate">--</span>
                     </div>
                 </div>
+                <button onclick="window.location.href='selecionar-loja.html'"
+                    class="flex items-center gap-3 px-3 py-2 bg-blue-600 hover:bg-blue-700 w-full rounded-lg transition-all duration-300 cursor-pointer text-white mb-1">
+                    <i class="fa-solid fa-store text-xs"></i>
+                    <span class="text-sm font-medium">Trocar loja</span>
+                </button>
+                <button id="btn-logout" class="flex items-center gap-3 px-3 py-2 hover:bg-red-50 w-full rounded-lg transition-all duration-300 cursor-pointer text-red-500 hover:text-red-600">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="text-sm font-medium">Sair da conta</span>
+                </button>
             </div>
 
         </aside>
 
-        <!-- MAIN -->
         <main class="flex-1 flex flex-col overflow-hidden">
 
             <header class="p-8 flex justify-between items-start">
@@ -95,81 +87,130 @@
                     <h2 class="text-2xl font-bold text-gray-800">Relatórios</h2>
                     <p class="text-slate-600 text-lg font-light">Análises e exportação de dados do estoque</p>
                 </div>
-
                 <div class="flex space-x-2">
-                    <button onclick="exportarPDF()" class="bg-gray-600 text-white px-4 py-2 rounded-lg font-medium flex items-center
-                    cursor-pointer hover:bg-gray-800 transition-all">
+                    <button onclick="exportarPDF()" class="bg-gray-600 text-white px-4 py-2 rounded-lg font-medium flex items-center cursor-pointer hover:bg-gray-800 transition-all">
                         <i class="mr-2 text-sm fa-regular fa-file-lines"></i> Exportar PDF
                     </button>
-                    <button onclick="exportarExcel()" class="bg-white border-gray-200 border-[0.1rem] text-black px-4 py-2 rounded-lg font-medium flex items-center
-                    cursor-pointer hover:bg-gray-200">
+                    <button onclick="exportarExcel()" class="bg-white border-gray-200 border-[0.1rem] text-black px-4 py-2 rounded-lg font-medium flex items-center cursor-pointer hover:bg-gray-200">
                         <i class="mr-2 text-sm fa-solid fa-file-export"></i> Exportar Excel
                     </button>
                 </div>
             </header>
 
             <!-- Cards de resumo -->
-            <section class="px-8 grid grid-cols-3 gap-4 mb-6" id="cardsResumo">
-                <!-- Gerados por JS -->
+            <section class="px-8 grid grid-cols-3 gap-4 mb-6">
+                <div class="bg-white rounded-xl border border-gray-200 p-5 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl bg-blue-100 text-blue-600 shrink-0">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wide font-medium">Valor Total em Estoque</p>
+                        <p class="text-xl font-bold text-gray-800" id="card-valor">--</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200 p-5 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl bg-green-100 text-green-600 shrink-0">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wide font-medium">Total de Itens</p>
+                        <p class="text-xl font-bold text-gray-800" id="card-itens">--</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200 p-5 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl bg-yellow-100 text-yellow-600 shrink-0">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wide font-medium">Produto Mais Valioso</p>
+                        <p class="text-xl font-bold text-gray-800 truncate max-w-[160px]" id="card-valioso">--</p>
+                    </div>
+                </div>
             </section>
 
             <!-- Conteúdo principal -->
             <section class="px-8 flex gap-4 flex-1 overflow-hidden pb-8">
 
-                <!-- Menu lateral de tipos -->
                 <div class="w-56 bg-white rounded-xl border-[0.1rem] border-gray-200 p-4 flex flex-col gap-1 shrink-0">
                     <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Tipo de Relatório</h3>
-
                     <button onclick="mudarAba('inventario')" id="btn-inventario"
                         class="aba-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all text-left w-full bg-blue-600 text-white">
                         <i class="fa-solid fa-boxes-stacked text-xs"></i> Valor do Inventário
                     </button>
-
                     <button onclick="mudarAba('giro')" id="btn-giro"
                         class="aba-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all text-left w-full hover:bg-gray-100 text-gray-700">
                         <i class="fa-solid fa-rotate text-xs"></i> Giro de Estoque
                     </button>
-
                     <button onclick="mudarAba('fornecedor')" id="btn-fornecedor"
                         class="aba-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all text-left w-full hover:bg-gray-100 text-gray-700">
                         <i class="fa-solid fa-user-group text-xs"></i> Por Fornecedor
                     </button>
                 </div>
 
-                <!-- Área de conteúdo do relatório -->
                 <div class="flex-1 bg-white rounded-xl border-[0.1rem] border-gray-200 overflow-auto p-6">
 
-                    <!-- Relatório: Valor do Inventário -->
+                    <!-- Inventário -->
                     <div id="aba-inventario" class="aba-content">
-                        <div class="flex justify-between items-center mb-4">
-                            <div>
-                                <h3 class="text-lg font-bold text-gray-800">Valor do Inventário</h3>
-                                <p class="text-sm text-gray-500">Valor total de todos os produtos em estoque</p>
-                            </div>
-                        </div>
-                        <div id="tabela-inventario"></div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">Valor do Inventário</h3>
+                        <p class="text-sm text-gray-500 mb-4">Valor total de todos os produtos em estoque</p>
+                        <div id="tabela-inventario"><div class="text-center py-10 text-gray-400">Carregando...</div></div>
                     </div>
 
-                    <!-- Relatório: Giro de Estoque -->
+                    <!-- Giro de Estoque com filtros -->
                     <div id="aba-giro" class="aba-content hidden">
-                        <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">Giro de Estoque</h3>
+                        <p class="text-sm text-gray-500 mb-4">Movimentações filtradas por data, produto e tipo</p>
+
+                        <!-- Filtros -->
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-5 grid grid-cols-4 gap-3 items-end">
                             <div>
-                                <h3 class="text-lg font-bold text-gray-800">Giro de Estoque</h3>
-                                <p class="text-sm text-gray-500">Movimentações de entrada e saída por produto</p>
+                                <label class="text-xs font-semibold text-gray-500 uppercase block mb-1">Data de</label>
+                                <input type="date" id="filtro-data-de" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            </div>
+                            <div>
+                                <label class="text-xs font-semibold text-gray-500 uppercase block mb-1">Data até</label>
+                                <input type="date" id="filtro-data-ate" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            </div>
+                            <div>
+                                <label class="text-xs font-semibold text-gray-500 uppercase block mb-1">Produto</label>
+                                <input type="text" id="filtro-produto" placeholder="Buscar produto..." class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            </div>
+                            <div>
+                                <label class="text-xs font-semibold text-gray-500 uppercase block mb-1">Tipo</label>
+                                <select id="filtro-tipo" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                    <option value="">Todos</option>
+                                    <option value="entrada">Entradas</option>
+                                    <option value="saida">Saídas</option>
+                                </select>
                             </div>
                         </div>
-                        <div id="tabela-giro"></div>
+
+                        <!-- Botões de ação -->
+                        <div class="flex gap-2 mb-4">
+                            <button onclick="aplicarFiltrosGiro()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium cursor-pointer hover:bg-blue-700 transition-all">
+                                <i class="fa-solid fa-magnifying-glass mr-1"></i> Filtrar
+                            </button>
+                            <button onclick="limparFiltrosGiro()" class="bg-white border border-gray-200 text-gray-600 px-4 py-2 rounded-lg text-sm font-medium cursor-pointer hover:bg-gray-100 transition-all">
+                                <i class="fa-solid fa-xmark mr-1"></i> Limpar
+                            </button>
+                        </div>
+
+                        <!-- Resumo dos filtros -->
+                        <div id="resumo-giro" class="hidden bg-blue-50 border border-blue-200 rounded-lg px-4 py-3 mb-4 flex gap-6 text-sm">
+                            <span class="text-blue-700">Total registros: <strong id="resumo-total">0</strong></span>
+                            <span class="text-green-700">Entradas: <strong id="resumo-entradas">0</strong></span>
+                            <span class="text-red-600">Saídas: <strong id="resumo-saidas">0</strong></span>
+                            <span class="text-gray-700">Valor total: <strong id="resumo-valor">R$ 0,00</strong></span>
+                        </div>
+
+                        <div id="tabela-giro"><div class="text-center py-10 text-gray-400">Carregando...</div></div>
                     </div>
 
-                    <!-- Relatório: Por Fornecedor -->
+                    <!-- Por Fornecedor -->
                     <div id="aba-fornecedor" class="aba-content hidden">
-                        <div class="flex justify-between items-center mb-4">
-                            <div>
-                                <h3 class="text-lg font-bold text-gray-800">Produtos por Fornecedor</h3>
-                                <p class="text-sm text-gray-500">Quantidade e valor agrupados por fornecedor</p>
-                            </div>
-                        </div>
-                        <div id="tabela-fornecedor"></div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">Produtos por Fornecedor</h3>
+                        <p class="text-sm text-gray-500 mb-4">Quantidade e valor agrupados por fornecedor</p>
+                        <div id="tabela-fornecedor"><div class="text-center py-10 text-gray-400">Carregando...</div></div>
                     </div>
 
                 </div>
@@ -178,307 +219,345 @@
         </main>
     </div>
 
-    <!-- Modal de exportação -->
-    <div id="modalExport" class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
-        <div class="bg-white rounded-xl shadow-xl p-8 w-96">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-lg font-bold text-gray-800" id="modalExportTitulo">Exportar</h3>
-                <button onclick="fecharModalExport()" class="text-gray-400 hover:text-gray-700 text-xl"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <p class="text-gray-500 text-sm mb-6" id="modalExportMsg"></p>
-            <div class="flex justify-end gap-2">
-                <button onclick="fecharModalExport()" class="px-4 py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-100 text-sm">Cancelar</button>
-                <button onclick="confirmarExport()" id="btnConfirmarExport" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 text-sm font-medium">Confirmar</button>
-            </div>
-        </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/9898c47017.js" crossorigin="anonymous"></script>
-    <script src="/script.js"></script>
 
-    <script>
-        // ─── Leitura do localStorage ───────────────────────────────────────────────
-        function getProdutos() {
-            try { return JSON.parse(localStorage.getItem('products')) || []; }
-            catch { return []; }
-        }
-        function getMovimentacoes() {
-            try { return JSON.parse(localStorage.getItem('movements')) || []; }
-            catch { return []; }
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+        const supabase = createClient(
+            'https://wrajtiizvkvtzqmoicbm.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndyYWp0aWl6dmt2dHpxbW9pY2JtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyOTg4NTksImV4cCI6MjA5Mzg3NDg1OX0.pjbTkVx_KGs2ZDv_vQJOPc4ODgwi0q04qA5o2eMSqLA'
+        )
+
+        // ── Sessão ──────────────────────────────────────────────
+        const { data: { session } } = await supabase.auth.getSession()
+        if (!session) { window.location.href = 'index.html' }
+        else {
+            const nome = session.user.user_metadata?.nome || session.user.email
+            document.getElementById('user-email').textContent = nome
+            document.getElementById('user-inicial').textContent = (nome || 'U')[0].toUpperCase()
         }
 
-        // ─── Cards de resumo ──────────────────────────────────────────────────────
+        const lojaId = sessionStorage.getItem('loja_id')
+        const lojaNome = sessionStorage.getItem('loja_nome')
+        if (!lojaId) { window.location.href = 'selecionar-loja.html' }
+        if (lojaNome) {
+            const el = document.getElementById('loja-nome-sidebar')
+            if (el) el.textContent = lojaNome
+        }
+
+        document.getElementById('btn-logout').addEventListener('click', async () => {
+            await supabase.auth.signOut()
+            sessionStorage.clear()
+            window.location.href = 'index.html'
+        })
+
+        // ── Dados ───────────────────────────────────────────────
+        let produtos = []
+        let movimentacoes = []
+
+        async function carregarDados() {
+            const [resProdutos, resMov] = await Promise.all([
+                supabase.from('produtos').select('*').eq('loja_id', lojaId).order('nome'),
+                supabase.from('movimentacoes').select('*, produtos(nome, sku)').eq('loja_id', lojaId).order('data', { ascending: false })
+            ])
+            produtos = resProdutos.data || []
+            movimentacoes = resMov.data || []
+            renderCards()
+            renderInventario()
+            renderGiro(movimentacoes)
+            renderFornecedor()
+        }
+
+        // ── Cards ───────────────────────────────────────────────
         function renderCards() {
-            const produtos = getProdutos();
-            const movs = getMovimentacoes();
-
-            const totalValor = produtos.reduce((s, p) => s + ((parseFloat(p.price) || 0) * (parseInt(p.quantity) || 0)), 0);
-            const totalItens = produtos.reduce((s, p) => s + (parseInt(p.quantity) || 0), 0);
-
-            const maisValioso = produtos.length
-                ? produtos.reduce((a, b) => ((parseFloat(a.price) || 0) > (parseFloat(b.price) || 0) ? a : b))
-                : null;
-
-            const cards = [
-                {
-                    icon: 'fa-solid fa-dollar-sign',
-                    cor: 'bg-blue-100 text-blue-600',
-                    label: 'Valor Total em Estoque',
-                    valor: 'R$ ' + totalValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })
-                },
-                {
-                    icon: 'fa-solid fa-cubes',
-                    cor: 'bg-green-100 text-green-600',
-                    label: 'Total de Itens',
-                    valor: totalItens.toLocaleString('pt-BR')
-                },
-                {
-                    icon: 'fa-solid fa-trophy',
-                    cor: 'bg-yellow-100 text-yellow-600',
-                    label: 'Produto Mais Valioso',
-                    valor: maisValioso ? (maisValioso.name || 'Sem nome') : '—'
-                }
-            ];
-
-            document.getElementById('cardsResumo').innerHTML = cards.map(c => `
-                <div class="bg-white rounded-xl border-[0.1rem] border-gray-200 p-5 flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl ${c.cor} shrink-0">
-                        <i class="${c.icon}"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs text-gray-400 uppercase tracking-wide font-medium">${c.label}</p>
-                        <p class="text-xl font-bold text-gray-800 truncate max-w-[160px]" title="${c.valor}">${c.valor}</p>
-                    </div>
-                </div>
-            `).join('');
+            const totalValor = produtos.reduce((s, p) => s + ((p.preco_unitario || 0) * (p.quantidade || 0)), 0)
+            const totalItens = produtos.reduce((s, p) => s + (p.quantidade || 0), 0)
+            const maisValioso = produtos.length ? produtos.reduce((a, b) => (a.preco_unitario || 0) > (b.preco_unitario || 0) ? a : b) : null
+            document.getElementById('card-valor').textContent = totalValor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+            document.getElementById('card-itens').textContent = totalItens.toLocaleString('pt-BR')
+            document.getElementById('card-valioso').textContent = maisValioso ? maisValioso.nome : '—'
         }
 
-        // ─── Tabela Inventário ────────────────────────────────────────────────────
+        // ── Inventário ──────────────────────────────────────────
         function renderInventario() {
-            const produtos = getProdutos();
-            const el = document.getElementById('tabela-inventario');
-
-            if (!produtos.length) {
-                el.innerHTML = estadoVazio('Nenhum produto cadastrado ainda.');
-                return;
-            }
-
+            const el = document.getElementById('tabela-inventario')
+            if (!produtos.length) { el.innerHTML = estadoVazio('Nenhum produto cadastrado ainda.'); return }
+            const totalGeral = produtos.reduce((s, p) => s + ((p.preco_unitario || 0) * (p.quantidade || 0)), 0)
             const rows = produtos.map(p => {
-                const preco = parseFloat(p.price) || 0;
-                const qtd   = parseInt(p.quantity) || 0;
-                const total = preco * qtd;
+                const preco = p.preco_unitario || 0
+                const qtd = p.quantidade || 0
+                const total = preco * qtd
                 const badge = qtd === 0
                     ? '<span class="px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-600">Zerado</span>'
-                    : qtd <= 5
+                    : qtd <= p.estoque_minimo
                     ? '<span class="px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-600">Baixo</span>'
-                    : '<span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-600">Normal</span>';
-
-                return `<tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                    <td class="py-3 px-4 text-sm font-medium text-gray-800">${p.name || '—'}</td>
-                    <td class="py-3 px-4 text-sm text-gray-600">${p.category || '—'}</td>
-                    <td class="py-3 px-4 text-sm text-gray-800 text-center font-medium">${qtd}</td>
-                    <td class="py-3 px-4 text-sm text-gray-600">R$ ${preco.toFixed(2).replace('.', ',')}</td>
-                    <td class="py-3 px-4 text-sm font-semibold text-gray-800">R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</td>
+                    : '<span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-600">Normal</span>'
+                return `<tr class="border-b border-gray-100 hover:bg-gray-50">
+                    <td class="py-3 px-4 text-sm font-medium text-gray-800">${p.nome}</td>
+                    <td class="py-3 px-4 text-sm text-gray-600">${p.categoria || '—'}</td>
+                    <td class="py-3 px-4 text-sm text-center font-medium">${qtd}</td>
+                    <td class="py-3 px-4 text-sm text-gray-600">${preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td class="py-3 px-4 text-sm font-semibold">${total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td class="py-3 px-4">${badge}</td>
-                </tr>`;
-            }).join('');
-
-            const totalGeral = produtos.reduce((s, p) => s + ((parseFloat(p.price) || 0) * (parseInt(p.quantity) || 0)), 0);
-
-            el.innerHTML = `
-                <table class="w-full text-left">
-                    <thead>
-                        <tr class="border-b-2 border-gray-200">
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Produto</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Categoria</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide text-center">Qtd.</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Preço Unit.</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Valor Total</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>${rows}</tbody>
-                    <tfoot>
-                        <tr class="border-t-2 border-gray-200 bg-gray-50">
-                            <td colspan="4" class="py-3 px-4 text-sm font-bold text-gray-700">Total Geral</td>
-                            <td class="py-3 px-4 text-sm font-bold text-blue-600">R$ ${totalGeral.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</td>
-                            <td></td>
-                        </tr>
-                    </tfoot>
-                </table>`;
+                </tr>`
+            }).join('')
+            el.innerHTML = `<table class="w-full text-left">
+                <thead><tr class="border-b-2 border-gray-200">
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Produto</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Categoria</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase text-center">Qtd.</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Preço Unit.</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Valor Total</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Status</th>
+                </tr></thead>
+                <tbody>${rows}</tbody>
+                <tfoot><tr class="border-t-2 border-gray-200 bg-gray-50">
+                    <td colspan="4" class="py-3 px-4 text-sm font-bold text-gray-700">Total Geral</td>
+                    <td class="py-3 px-4 text-sm font-bold text-blue-600">${totalGeral.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td></td>
+                </tr></tfoot>
+            </table>`
         }
 
-        // ─── Tabela Giro de Estoque ───────────────────────────────────────────────
-        function renderGiro() {
-            const movs = getMovimentacoes();
-            const el = document.getElementById('tabela-giro');
+        // ── Giro de Estoque com filtros ─────────────────────────
+        function renderGiro(lista) {
+            const el = document.getElementById('tabela-giro')
+            if (!lista.length) { el.innerHTML = estadoVazio('Nenhuma movimentação encontrada para os filtros selecionados.'); return }
 
-            if (!movs.length) {
-                el.innerHTML = estadoVazio('Nenhuma movimentação registrada ainda.');
-                return;
-            }
+            // Resumo
+            const totalEntradas = lista.filter(m => m.tipo === 'entrada').reduce((s, m) => s + m.quantidade, 0)
+            const totalSaidas = lista.filter(m => m.tipo === 'saida').reduce((s, m) => s + m.quantidade, 0)
+            const totalValor = lista.reduce((s, m) => s + ((m.valor_unitario || 0) * m.quantidade), 0)
 
-            // Agrupa por produto
-            const mapa = {};
-            movs.forEach(m => {
-                const nome = m.productName || m.product || 'Desconhecido';
-                if (!mapa[nome]) mapa[nome] = { entradas: 0, saidas: 0 };
-                const qtd = parseInt(m.quantity) || 0;
-                if ((m.type || '').toLowerCase().includes('entrada') || (m.type || '').toLowerCase().includes('in')) {
-                    mapa[nome].entradas += qtd;
-                } else {
-                    mapa[nome].saidas += qtd;
+            document.getElementById('resumo-total').textContent = lista.length
+            document.getElementById('resumo-entradas').textContent = totalEntradas
+            document.getElementById('resumo-saidas').textContent = totalSaidas
+            document.getElementById('resumo-valor').textContent = totalValor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+            document.getElementById('resumo-giro').classList.remove('hidden')
+
+            const rows = lista.map(m => {
+                const data = new Date(m.data).toLocaleString('pt-BR')
+                const isEntrada = m.tipo === 'entrada'
+                const tipoBadge = isEntrada
+                    ? `<span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-medium">Entrada</span>`
+                    : `<span class="bg-red-100 text-red-700 px-2 py-0.5 rounded-full text-xs font-medium">Saída</span>`
+                const valorUnit = m.valor_unitario ? Number(m.valor_unitario).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : '-'
+                const valorTotal = m.valor_unitario ? (Number(m.valor_unitario) * m.quantidade).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : '-'
+
+                return `<tr class="border-b border-gray-100 hover:bg-gray-50">
+                    <td class="py-3 px-4 text-xs text-gray-500">${data}</td>
+                    <td class="py-3 px-4">${tipoBadge}</td>
+                    <td class="py-3 px-4 text-sm font-medium text-gray-800">${m.produtos?.nome || '—'}</td>
+                    <td class="py-3 px-4 text-sm font-bold ${isEntrada ? 'text-green-600' : 'text-red-500'}">${isEntrada ? '+' : '-'}${m.quantidade}</td>
+                    <td class="py-3 px-4 text-sm text-gray-600">${valorUnit}</td>
+                    <td class="py-3 px-4 text-sm font-medium text-gray-700">${valorTotal}</td>
+                    <td class="py-3 px-4 text-xs text-gray-400">${m.motivo || '-'}</td>
+                </tr>`
+            }).join('')
+
+            el.innerHTML = `<table class="w-full text-left">
+                <thead><tr class="border-b-2 border-gray-200">
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Data/Hora</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Tipo</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Produto</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Qtd.</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Valor Unit.</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Valor Total</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Motivo</th>
+                </tr></thead>
+                <tbody>${rows}</tbody>
+            </table>`
+        }
+
+        // ── Aplicar filtros no Giro ─────────────────────────────
+        window.aplicarFiltrosGiro = function() {
+            const dataDe = document.getElementById('filtro-data-de').value
+            const dataAte = document.getElementById('filtro-data-ate').value
+            const produto = document.getElementById('filtro-produto').value.toLowerCase().trim()
+            const tipo = document.getElementById('filtro-tipo').value
+
+            const filtradas = movimentacoes.filter(m => {
+                const dataM = new Date(m.data)
+
+                if (dataDe) {
+                    const de = new Date(dataDe + 'T00:00:00')
+                    if (dataM < de) return false
                 }
-            });
+                if (dataAte) {
+                    const ate = new Date(dataAte + 'T23:59:59')
+                    if (dataM > ate) return false
+                }
+                if (produto && !(m.produtos?.nome || '').toLowerCase().includes(produto)) return false
+                if (tipo && m.tipo !== tipo) return false
 
-            const rows = Object.entries(mapa).map(([nome, v]) => {
-                const saldo = v.entradas - v.saidas;
-                const cor = saldo >= 0 ? 'text-green-600' : 'text-red-600';
-                return `<tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                    <td class="py-3 px-4 text-sm font-medium text-gray-800">${nome}</td>
-                    <td class="py-3 px-4 text-sm text-green-600 font-medium">+${v.entradas}</td>
-                    <td class="py-3 px-4 text-sm text-red-500 font-medium">-${v.saidas}</td>
-                    <td class="py-3 px-4 text-sm font-bold ${cor}">${saldo >= 0 ? '+' : ''}${saldo}</td>
-                </tr>`;
-            }).join('');
+                return true
+            })
 
-            el.innerHTML = `
-                <table class="w-full text-left">
-                    <thead>
-                        <tr class="border-b-2 border-gray-200">
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Produto</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Entradas</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Saídas</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Saldo</th>
-                        </tr>
-                    </thead>
-                    <tbody>${rows}</tbody>
-                </table>`;
+            renderGiro(filtradas)
         }
 
-        // ─── Tabela Por Fornecedor ────────────────────────────────────────────────
+        window.limparFiltrosGiro = function() {
+            document.getElementById('filtro-data-de').value = ''
+            document.getElementById('filtro-data-ate').value = ''
+            document.getElementById('filtro-produto').value = ''
+            document.getElementById('filtro-tipo').value = ''
+            renderGiro(movimentacoes)
+        }
+
+        // ── Por fornecedor ──────────────────────────────────────
         function renderFornecedor() {
-            const produtos = getProdutos();
-            const el = document.getElementById('tabela-fornecedor');
-
-            if (!produtos.length) {
-                el.innerHTML = estadoVazio('Nenhum produto cadastrado ainda.');
-                return;
-            }
-
-            const mapa = {};
+            const el = document.getElementById('tabela-fornecedor')
+            if (!produtos.length) { el.innerHTML = estadoVazio('Nenhum produto cadastrado ainda.'); return }
+            const mapa = {}
             produtos.forEach(p => {
-                const forn = p.supplier || p.fornecedor || 'Sem fornecedor';
-                if (!mapa[forn]) mapa[forn] = { qtd: 0, valor: 0, produtos: [] };
-                mapa[forn].qtd   += parseInt(p.quantity) || 0;
-                mapa[forn].valor += (parseFloat(p.price) || 0) * (parseInt(p.quantity) || 0);
-                mapa[forn].produtos.push(p.name || '—');
-            });
-
+                const forn = p.fornecedor || 'Sem fornecedor'
+                if (!mapa[forn]) mapa[forn] = { qtd: 0, valor: 0, nomes: [] }
+                mapa[forn].qtd += p.quantidade || 0
+                mapa[forn].valor += (p.preco_unitario || 0) * (p.quantidade || 0)
+                mapa[forn].nomes.push(p.nome)
+            })
             const rows = Object.entries(mapa).map(([forn, v]) => `
-                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                <tr class="border-b border-gray-100 hover:bg-gray-50">
                     <td class="py-3 px-4 text-sm font-medium text-gray-800">${forn}</td>
-                    <td class="py-3 px-4 text-sm text-gray-600">${v.produtos.length} produto(s)</td>
-                    <td class="py-3 px-4 text-sm text-gray-800 text-center font-medium">${v.qtd}</td>
-                    <td class="py-3 px-4 text-sm font-semibold text-gray-800">R$ ${v.valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</td>
-                    <td class="py-3 px-4 text-xs text-gray-400">${v.produtos.slice(0, 3).join(', ')}${v.produtos.length > 3 ? '...' : ''}</td>
-                </tr>`).join('');
-
-            el.innerHTML = `
-                <table class="w-full text-left">
-                    <thead>
-                        <tr class="border-b-2 border-gray-200">
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Fornecedor</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Produtos</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide text-center">Qtd. Total</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Valor Total</th>
-                            <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Lista</th>
-                        </tr>
-                    </thead>
-                    <tbody>${rows}</tbody>
-                </table>`;
+                    <td class="py-3 px-4 text-sm text-gray-600">${v.nomes.length} produto(s)</td>
+                    <td class="py-3 px-4 text-sm text-center font-medium">${v.qtd}</td>
+                    <td class="py-3 px-4 text-sm font-semibold">${v.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td class="py-3 px-4 text-xs text-gray-400">${v.nomes.slice(0, 3).join(', ')}${v.nomes.length > 3 ? '...' : ''}</td>
+                </tr>`).join('')
+            el.innerHTML = `<table class="w-full text-left">
+                <thead><tr class="border-b-2 border-gray-200">
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Fornecedor</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Produtos</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase text-center">Qtd. Total</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Valor Total</th>
+                    <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase">Lista</th>
+                </tr></thead>
+                <tbody>${rows}</tbody>
+            </table>`
         }
 
-        // ─── Estado vazio ─────────────────────────────────────────────────────────
+        // ── Estado vazio ────────────────────────────────────────
         function estadoVazio(msg) {
             return `<div class="flex flex-col items-center justify-center py-20 text-gray-400">
                 <i class="fa-solid fa-folder-open text-5xl mb-4"></i>
                 <p class="text-lg font-medium">${msg}</p>
                 <p class="text-sm mt-1">Os dados aparecerão aqui assim que forem cadastrados.</p>
-            </div>`;
+            </div>`
         }
 
-        // ─── Troca de abas ────────────────────────────────────────────────────────
-        function mudarAba(aba) {
-            document.querySelectorAll('.aba-content').forEach(el => el.classList.add('hidden'));
+        // ── Troca de abas ───────────────────────────────────────
+        window.mudarAba = function(aba) {
+            document.querySelectorAll('.aba-content').forEach(el => el.classList.add('hidden'))
             document.querySelectorAll('.aba-btn').forEach(btn => {
-                btn.classList.remove('bg-blue-600', 'text-white');
-                btn.classList.add('hover:bg-gray-100', 'text-gray-700');
-            });
-
-            document.getElementById('aba-' + aba).classList.remove('hidden');
-            const btnAtivo = document.getElementById('btn-' + aba);
-            btnAtivo.classList.add('bg-blue-600', 'text-white');
-            btnAtivo.classList.remove('hover:bg-gray-100', 'text-gray-700');
+                btn.classList.remove('bg-blue-600', 'text-white')
+                btn.classList.add('hover:bg-gray-100', 'text-gray-700')
+            })
+            document.getElementById('aba-' + aba).classList.remove('hidden')
+            const btnAtivo = document.getElementById('btn-' + aba)
+            btnAtivo.classList.add('bg-blue-600', 'text-white')
+            btnAtivo.classList.remove('hover:bg-gray-100', 'text-gray-700')
         }
 
-        // ─── Exportar PDF (impressão) ─────────────────────────────────────────────
-        let acaoExport = null;
+        // ── Exportar PDF ────────────────────────────────────────
+        window.exportarPDF = function() {
+            if (!produtos.length) { alert('Nenhum produto para exportar.'); return }
+            const { jsPDF } = window.jspdf
+            const doc = new jsPDF()
+            const dataHoje = new Date().toLocaleDateString('pt-BR')
+            const nomeLoja = lojaNome || 'Loja'
 
-        function exportarPDF() {
-            acaoExport = 'pdf';
-            document.getElementById('modalExportTitulo').textContent = 'Exportar PDF';
-            document.getElementById('modalExportMsg').textContent = 'Isso vai abrir a janela de impressão do navegador. Escolha "Salvar como PDF" para baixar o relatório.';
-            document.getElementById('modalExport').classList.remove('hidden');
-        }
+            doc.setFillColor(37, 99, 235)
+            doc.rect(0, 0, 210, 28, 'F')
+            doc.setTextColor(255, 255, 255)
+            doc.setFontSize(16)
+            doc.setFont(undefined, 'bold')
+            doc.text('Coneccta Comercio', 14, 12)
+            doc.setFontSize(10)
+            doc.setFont(undefined, 'normal')
+            doc.text('Relatorio de Estoque — ' + nomeLoja, 14, 20)
+            doc.text('Data: ' + dataHoje, 150, 20)
 
-        function exportarExcel() {
-            acaoExport = 'excel';
-            document.getElementById('modalExportTitulo').textContent = 'Exportar Excel';
-            document.getElementById('modalExportMsg').textContent = 'O relatório atual será baixado como arquivo CSV, compatível com Excel e Google Planilhas.';
-            document.getElementById('modalExport').classList.remove('hidden');
-        }
+            const totalValor = produtos.reduce((s, p) => s + ((p.preco_unitario || 0) * (p.quantidade || 0)), 0)
+            const totalItens = produtos.reduce((s, p) => s + (p.quantidade || 0), 0)
+            const totalAlertas = produtos.filter(p => p.quantidade < p.estoque_minimo).length
 
-        function fecharModalExport() {
-            document.getElementById('modalExport').classList.add('hidden');
-            acaoExport = null;
-        }
+            doc.setTextColor(30, 30, 30)
+            doc.setFontSize(11)
+            doc.setFont(undefined, 'bold')
+            doc.text('Resumo', 14, 38)
+            doc.setFont(undefined, 'normal')
+            doc.setFontSize(10)
+            doc.text('Valor Total em Estoque: ' + totalValor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }), 14, 46)
+            doc.text('Total de Produtos: ' + produtos.length + '   |   Total de Itens: ' + totalItens + '   |   Alertas: ' + totalAlertas, 14, 53)
 
-        function confirmarExport() {
-            fecharModalExport();
-            if (acaoExport === 'pdf') {
-                window.print();
-            } else if (acaoExport === 'excel') {
-                gerarCSV();
+            doc.setFontSize(12)
+            doc.setFont(undefined, 'bold')
+            doc.setTextColor(37, 99, 235)
+            doc.text('Inventario de Produtos', 14, 64)
+
+            const tableRows = produtos.map(p => {
+                const preco = p.preco_unitario || 0
+                const qtd = p.quantidade || 0
+                const status = qtd === 0 ? 'Zerado' : qtd <= p.estoque_minimo ? 'Baixo' : 'Normal'
+                return [p.nome, p.categoria || '—', qtd.toString(),
+                    preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
+                    (preco * qtd).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }), status]
+            })
+
+            doc.autoTable({
+                startY: 68,
+                head: [['Produto', 'Categoria', 'Qtd.', 'Preco Unit.', 'Valor Total', 'Status']],
+                body: tableRows,
+                styles: { fontSize: 8, cellPadding: 2.5 },
+                headStyles: { fillColor: [37, 99, 235], textColor: 255, fontStyle: 'bold' },
+                alternateRowStyles: { fillColor: [245, 247, 250] },
+                columnStyles: { 2: { halign: 'center' } },
+                foot: [[
+                    { content: 'Total Geral', colSpan: 4, styles: { fontStyle: 'bold', fillColor: [240, 240, 240] } },
+                    { content: totalValor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }), styles: { fontStyle: 'bold', textColor: [37, 99, 235], fillColor: [240, 240, 240] } },
+                    { content: '', styles: { fillColor: [240, 240, 240] } }
+                ]]
+            })
+
+            const pageCount = doc.internal.getNumberOfPages()
+            for (let i = 1; i <= pageCount; i++) {
+                doc.setPage(i)
+                doc.setFontSize(8)
+                doc.setTextColor(150, 150, 150)
+                doc.text('Desenvolvido por Lucas Dias Torto © 2025', 14, doc.internal.pageSize.height - 8)
+                doc.text('Pagina ' + i + ' de ' + pageCount, doc.internal.pageSize.width - 28, doc.internal.pageSize.height - 8)
             }
+
+            doc.save('relatorio-' + nomeLoja.toLowerCase().replace(/ /g, '-') + '-' + dataHoje.replace(/\//g, '-') + '.pdf')
         }
 
-        function gerarCSV() {
-            const produtos = getProdutos();
-            if (!produtos.length) { alert('Nenhum produto para exportar.'); return; }
-
-            const header = 'Produto,Categoria,Quantidade,Preço Unitário,Valor Total\n';
+        // ── Exportar Excel ──────────────────────────────────────
+        window.exportarExcel = function() {
+            if (!produtos.length) { alert('Nenhum produto para exportar.'); return }
+            const header = 'Produto,Categoria,Quantidade,Preco Unitario,Valor Total\n'
             const rows = produtos.map(p => {
-                const preco = parseFloat(p.price) || 0;
-                const qtd   = parseInt(p.quantity) || 0;
-                return [p.name || '', p.category || '', qtd, preco.toFixed(2), (preco * qtd).toFixed(2)].join(',');
-            }).join('\n');
-
-            const blob = new Blob(['\uFEFF' + header + rows], { type: 'text/csv;charset=utf-8;' });
-            const url  = URL.createObjectURL(blob);
-            const a    = document.createElement('a');
-            a.href = url; a.download = 'relatorio-estoque.csv'; a.click();
-            URL.revokeObjectURL(url);
+                const preco = p.preco_unitario || 0
+                const qtd = p.quantidade || 0
+                return [p.nome, p.categoria || '', qtd, preco.toFixed(2), (preco * qtd).toFixed(2)].join(',')
+            }).join('\n')
+            const blob = new Blob(['\uFEFF' + header + rows], { type: 'text/csv;charset=utf-8;' })
+            const url = URL.createObjectURL(blob)
+            const a = document.createElement('a')
+            a.href = url
+            a.download = 'relatorio-estoque-' + (lojaNome || 'loja') + '.csv'
+            a.click()
+            URL.revokeObjectURL(url)
         }
 
-        // ─── Init ─────────────────────────────────────────────────────────────────
-        renderCards();
-        renderInventario();
-        renderGiro();
-        renderFornecedor();
+        // ── Iniciar ─────────────────────────────────────────────
+        await carregarDados()
+
     </script>
 
 </body>

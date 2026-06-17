@@ -3,230 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerente de Estoque: Sistema de Gerenciamento de Estoque</title>
+    <title>Coneccta Comércio — Sistema de Estoque</title>
     <link rel="shortcut icon" href="/logo/logo_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="src/output.css">
 </head>
 <body class="font-poppins bg-gray-50">
 
-        <div class="flex h-screen">
+    <div class="flex h-screen">
 
-            <aside class="flex flex-col w-64 bg-white border-r border-gray-200">
+        <aside class="flex flex-col w-64 bg-white border-r border-gray-200">
 
-                <!--  logo / Sistema de Estoque -->
-                <div class="p-6 border-b border-gray-200">
-                    <img class="w-28 mx-auto mb-2" src="/logo/logo.png" alt="logo">
-                    <h1 class="text-center text-lg font-medium text-gray-400 mt-">Sistema de Estoque</h1>
-                </div>
-                
-                <!-- Dashborad / Produtos / Movimentações / Fornecedores / Relatórios / Alertas -->
-                <nav class="flex-1 px-4 space-y-1">
+            <div class="p-6 border-b border-gray-200">
+                <img class="w-28 mx-auto mb-2" src="/logo/logo.png" alt="logo">
+                <h1 class="text-center text-lg font-medium text-blue-600">Sistema de Estoque</h1>
+            </div>
 
-                <!-- Dashborad -->
-                            <a href="dashboard.html">
-                                <div class="flex items-center space-x-3 cursor-pointer mt-5
-                                    bg-blue-600 hover:bg-blue-700 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
-                                    <i class="text-white fa-solid fa-cube"></i>
-                                    <p class="text-white text-lg font-light">Dashborad</p>
-                                </div>
-                            </a>
-                <!-- Produtos -->
-                            <a href="produtos.html">
-                                <div class="flex items-center space-x-3 cursor-pointer mt-2
-                                hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
-                                <i class="text-black fa-solid fa-box"></i>
-                                <p class="text-black text-lg font-light">Produtos</p>
-                            </div>
-                            </a>
+            <nav class="flex-1 px-4 space-y-1">
+                <a href="dashboard.html">
+                    <div class="flex items-center space-x-3 cursor-pointer mt-5 bg-blue-600 hover:bg-blue-700 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                        <i class="text-white fa-solid fa-cube"></i>
+                        <p class="text-white text-lg font-light">Dashboard</p>
+                    </div>
+                </a>
+                <a href="produtos.html">
+                    <div class="flex items-center space-x-3 cursor-pointer mt-2 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                        <i class="text-black fa-solid fa-box"></i>
+                        <p class="text-black text-lg font-light">Produtos</p>
+                    </div>
+                </a>
+                <a href="movimentacaos.html">
+                    <div class="flex items-center space-x-3 cursor-pointer mt-2 hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                        <i class="text-black fa-solid fa-chart-simple"></i>
+                        <p class="text-black text-lg font-light">Movimentações</p>
+                    </div>
+                </a>
+                <a href="fornecedores.html">
+                    <div class="mt-2 flex items-center space-x-3 cursor-pointer hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                        <i class="text-black fa-solid fa-user-group"></i>
+                        <p class="text-black text-lg font-light">Fornecedores</p>
+                    </div>
+                </a>
+                <a href="relatorios.html">
+                    <div class="mt-2 flex items-center space-x-3 cursor-pointer hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                        <i class="text-black fa-solid fa-file"></i>
+                        <p class="text-black text-lg font-light">Relatórios</p>
+                    </div>
+                </a>
+                <a href="alertas.html">
+                    <div class="mt-2 flex items-center space-x-3 cursor-pointer hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
+                        <i class="text-black fa-solid fa-circle-exclamation"></i>
+                        <p class="text-black text-lg font-light">Alertas</p>
+                    </div>
+                </a>
+            </nav>
 
-                <!-- Movimentações -->
-                            <a href="movimentacaos.html">
-                                <div class="flex items-center space-x-3 cursor-pointer mt-2
-                                hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
-                                <i class="text-black fa-solid fa-chart-simple"></i>
-                                <p class="text-black text-lg font-light">Movimentações</p>
-                            </div>
-                            </a>
-
-                <!-- Fornecedores -->
-                            <a href="fornecedores.html">
-                                <div class="mt-2 flex items-center space-x-3 cursor-pointer
-                                hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
-                                <i class="text-black fa-solid fa-user-group"></i>
-                                <p class="text-black text-lg font-light">Fornecedores</p>
-                            </div>
-                            </a>
-
-                <!-- Relatórios -->
-                            <a href="relatorios.html">
-                                <div class="mt-2 flex items-center space-x-3 cursor-pointer
-                                hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
-                                <i class="text-black fa-solid fa-file"></i>
-                                <p class="text-black text-lg font-light">Relatórios</p>
-                            </div>
-                            </a>
-
-                <!-- Alertas -->
-                            <a href="alertas.html">
-                                <div class="mt-2 flex items-center space-x-3 cursor-pointer
-                                hover:bg-gray-200 hover:transition hover:ease-in-out hover:duration-300 rounded-lg p-2">
-                                <i class="text-black fa-solid fa-circle-exclamation"></i>
-                                <p class="text-black text-lg font-light">Alertas</p>
-                            </div>
-                            </a>
-                </nav>
-
-                <div class="border-t p-4 border-gray-200 flex items-center">
-                    <div class="flex items-center gap-3 p-4 hover:bg-gray-200 w-full rounded-lg hover:transition-all hover:duration-300 hover:ease-in-out cursor-pointer">
-                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm">
-                            <p>A</p>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="text-sm font-bold text-slate-800 leading-tight">Administrador</span>
-                            <span class="text-xs text-slate-400">Administrador</span>
-                        </div>
+            <div class="border-t p-4 border-gray-200">
+                <div class="flex items-center gap-3 p-4 bg-gray-50 w-full rounded-lg mb-2">
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm flex-shrink-0">
+                        <p id="user-inicial">A</p>
+                    </div>
+                    <div class="flex flex-col overflow-hidden">
+                        <span id="user-email" class="text-sm font-bold text-slate-800 leading-tight truncate">Carregando...</span>
+                        <span id="loja-nome-sidebar" class="text-xs text-slate-400 truncate">--</span>
                     </div>
                 </div>
-                
-            </aside>
+                <button onclick="window.location.href='selecionar-loja.html'"
+                    class="flex items-center gap-3 px-3 py-2 bg-blue-600 hover:bg-blue-700 w-full rounded-lg transition-all duration-300 cursor-pointer text-white mb-1">
+                    <i class="fa-solid fa-store text-xs"></i>
+                    <span class="text-sm font-medium">Trocar loja</span>
+                </button>
+                <button id="btn-logout" class="flex items-center gap-3 px-3 py-2 hover:bg-red-50 w-full rounded-lg transition-all duration-300 cursor-pointer text-red-500 hover:text-red-600">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="text-sm font-medium">Sair da conta</span>
+                </button>
+            </div>
 
-            <main class="flex-1 p-8">
-                <header class="mb-8">
+        </aside>
+
+        <main class="flex-1 p-8 overflow-y-auto">
+            <header class="mb-8 flex justify-between items-start">
+                <div>
                     <h2 class="text-3xl font-bold">Painel</h2>
-                    <p class="text-slate-600 text-lg font-light">Visão geral do sistema de estoque</p>
-                </header>
+                    <p class="text-slate-600 text-lg font-light" id="loja-subtitulo">Visão geral do sistema de estoque</p>
+                </div>
+                <button onclick="window.location.href='selecionar-loja.html'"
+                    class="flex items-center gap-2 text-sm text-gray-500 hover:text-blue-600 border border-gray-200 hover:border-blue-300 px-3 py-2 rounded-lg transition-all">
+                    <i class="fa-solid fa-store text-xs"></i>
+                    Trocar loja
+                </button>
+            </header>
 
-                <!-- sistenma grid -->
-                            <div class="mt-5 grid w-full tablet:grid-cols-2 laptop:grid-cols-2 desktop:grid-cols-4 
-                            tablet:gap-3 laptop:gap-5">
+            <!-- Cards de resumo -->
+            <div class="mt-5 grid w-full tablet:grid-cols-2 laptop:grid-cols-2 desktop:grid-cols-4 tablet:gap-3 laptop:gap-5">
 
-                            <!-- Total de Produtos -->
-                                <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
-                                    <div class="flex justify-between items-center">
-                                        <p class="text-lg text-gray-500 font-medium">Total de Produtos</p>
-                                        <i class="text-blue-600 fa-solid fa-cube"></i>
-                                    </div>
-                                    <div class="mt-1">
-                                        <p class="text-[21px] font-bold pt-5">235</p>
-                                        <p class="text-sm text-gray-400 font-light">Produtos cadastrados</p>
-                                    </div>
-                                </div>
+                <!-- Total de Produtos -->
+                <div class="bg-white px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <p class="text-lg text-gray-500 font-medium">Total de Produtos</p>
+                        <i class="text-blue-600 fa-solid fa-cube"></i>
+                    </div>
+                    <div class="mt-1">
+                        <p class="text-[21px] font-bold pt-5" id="total-produtos">--</p>
+                        <p class="text-sm text-gray-400 font-light">Produtos cadastrados</p>
+                    </div>
+                </div>
 
-                            <!-- Estoque Total -->
-                                <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
-                                    <div class="flex justify-between items-center">
-                                        <p class="text-lg text-gray-500 font-medium">Estoque Total</p>
-                                        <i class="text-green-600 fa-solid fa-arrow-trend-up"></i>
-                                    </div>
-                                    <div class="mt-1">
-                                        <p class="text-[21px] font-bold pt-5">23500</p>
-                                        <p class="text-sm text-gray-400 font-light">Unidades em estoque</p>
-                                    </div>
+                <!-- Estoque Total -->
+                <div class="bg-white px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <p class="text-lg text-gray-500 font-medium">Estoque Total</p>
+                        <i class="text-green-600 fa-solid fa-arrow-trend-up"></i>
+                    </div>
+                    <div class="mt-1">
+                        <p class="text-[21px] font-bold pt-5" id="estoque-total">--</p>
+                        <p class="text-sm text-gray-400 font-light">Unidades em estoque</p>
+                    </div>
+                </div>
 
-                                </div>
+                <!-- Valor Total -->
+                <div class="bg-white px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <p class="text-lg text-gray-500 font-medium">Valor Total</p>
+                        <i class="text-green-600 fa-solid fa-dollar-sign"></i>
+                    </div>
+                    <div class="mt-1">
+                        <p class="text-[21px] font-bold pt-5" id="valor-total">--</p>
+                        <p class="text-sm text-gray-400 font-light">Valor do inventário</p>
+                    </div>
+                </div>
 
-                            <!-- Valor Total -->
-                                <div class="bg-white laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
-                                    <div class="flex justify-between items-center">
-                                        <p class="text-lg text-gray-500 font-medium">Valor Total</p>
-                                        <i class="text-green-600 fa-solid fa-dollar-sign"></i>
-                                    </div>
-                                    <div class="mt-1">
-                                        <p class="text-[21px] font-bold pt-5">R$ 572.550,00</p>
-                                        <p class="text-sm text-gray-400 font-light">Valor do inventário</p>
-                                    </div>
+                <!-- Alertas de Estoque -->
+                <a href="alertas.html">
+                    <div class="bg-white hover:shadow-lg px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg text-gray-500 font-medium">Alertas de Estoque</p>
+                            <i class="text-red-600 fa-solid fa-circle-exclamation"></i>
+                        </div>
+                        <div class="mt-1">
+                            <p class="text-[21px] font-bold pt-5 text-red-600" id="total-alertas">--</p>
+                            <p class="text-sm text-gray-400 font-light">Produtos abaixo do mínimo</p>
+                        </div>
+                    </div>
+                </a>
 
-                                </div>
-                                
-                            <!-- Alertas de Estoque -->
-                                <a href="alertas.html">
-                                    <div class="bg-white hover:shadow-lg laptop:w-lg desktop:w-sm px-5 py-4 rounded-xl border-[0.1rem] border-gray-200">
-                                    <div class="flex justify-between items-center">
-                                        <p class="text-lg text-gray-500 font-medium">Alertas de Estoque</p>
-                                        <i class="text-red-600 fa-solid fa-circle-exclamation"></i>
-                                    </div>
-                                    <div class="mt-1">
-                                        <p class="text-[21px] font-bold pt-5 text-red-600">0</p>
-                                        <p class="text-sm text-gray-400 font-light">Produtos abaixo do mínimo</p>
-                                    </div>
+            </div>
 
-                                </div>
-                                </a>
-                                
+            <!-- Movimentações + Gráfico -->
+            <div class="mt-5 grid w-full tablet:grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-2 tablet:gap-3 laptop:gap-5">
+
+                <!-- Movimentações (Últimos 7 dias) -->
+                <div class="bg-white max-w-full rounded-xl border-[0.1rem] border-gray-200 p-5">
+                    <p class="text-md font-medium mb-3 lg:mb-9">Movimentações (Últimos 7 dias)</p>
+
+                    <div class="flex bg-green-100 p-5 rounded-lg justify-between items-center mt-5">
+                        <div class="flex items-center gap-5">
+                            <div class="bg-green-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
+                                <i class="text-white font-medium fa-solid fa-arrow-up"></i>
                             </div>
-
-
-                <!--  Movimentações (Últimos 7 dias) / Gráfico de Movimentações -->
-                        <div class="mt-2 grid w-full tablet:grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-2 
-                        tablet:gap-3 laptop:gap-5">
-
-                            <!--  Movimentações (Últimos 7 dias) -->
-                            <div class="bg-white max-w-full rounded-xl border-[0.1rem] border-gray-200 p-5">
-                                    <div>
-                                        <p class="text-md font-medium mb-3 lg:mb-9">Movimentações (Últimos 7 dias)</p> 
-                                    </div>
-
-                                    <!-- Entradas / Compras/Reposições -->
-                                    <div class="flex bg-green-100 p-5 rounded-lg justify-between items-center mt-5">
-                                        <div class="flex items-center gap-5">
-                                            <div class="bg-green-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
-                                                <i class="text-white font-medium fa-solid fa-arrow-up"></i>
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-lg font-medium">Entradas</p>
-                                                <p class="text-md font-light">Compras/Reposições</p>
-                                            </div>
-
-                                        </div>
-
-                                        <div>
-                                            <p class="text-2xl text-green-600 font-bold">0</p>
-                                        </div>
-                                    </div>
-                            
-                                    <!-- Saídas / Vendas/Perdas -->
-                                    <div class="flex bg-red-100 p-5 rounded-lg justify-between items-center mt-5">
-                                        <div class="flex items-center gap-5">
-                                            <div class="bg-red-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
-                                                <i class="text-white font-medium fa-solid fa-arrow-up"></i>
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-lg font-medium">Saídas</p>
-                                                <p class="text-md font-light">Vendas/Perdas</p>
-                                            </div>
-
-                                        </div>
-
-                                        <div>
-                                            <p class="text-2xl text-red-600 font-bold">0</p>
-                                        </div>
-                                    </div>
-                            
-                            </div>
-
-                            <!-- Gráfico de Movimentações -->
-                            <div class="bg-white max-w-full rounded-xl border-[0.1rem] border-gray-200 px-5 py-5">
-                                <div>
-                                    <p class="text-md font-medium mb-3">Gráfico de Movimentações</p>     
-                                </div>
-                                
-                                <div class="tablet:w-md laptop:w-auto desktop:w-auto">
-                                    <canvas id="inventoryChart"></canvas>
-                                </div>
+                            <div class="flex flex-col">
+                                <p class="text-lg font-medium">Entradas</p>
+                                <p class="text-md font-light">Compras/Reposições</p>
                             </div>
                         </div>
+                        <p class="text-2xl text-green-600 font-bold" id="total-entradas">--</p>
+                    </div>
 
-            </main>
-                           
-        </div>
+                    <div class="flex bg-red-100 p-5 rounded-lg justify-between items-center mt-5">
+                        <div class="flex items-center gap-5">
+                            <div class="bg-red-600 rounded-full flex items-center justify-center w-10 h-10 p-5">
+                                <i class="text-white font-medium fa-solid fa-arrow-down"></i>
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="text-lg font-medium">Saídas</p>
+                                <p class="text-md font-light">Vendas/Perdas</p>
+                            </div>
+                        </div>
+                        <p class="text-2xl text-red-600 font-bold" id="total-saidas">--</p>
+                    </div>
+                </div>
 
-        
+                <!-- Gráfico de Movimentações -->
+                <div class="bg-white max-w-full rounded-xl border-[0.1rem] border-gray-200 px-5 py-5">
+                    <p class="text-md font-medium mb-3">Gráfico de Movimentações</p>
+                    <div>
+                        <canvas id="inventoryChart"></canvas>
+                    </div>
+                </div>
 
+            </div>
+
+        </main>
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/9898c47017.js" crossorigin="anonymous"></script>
-    <script src="/script.js"></script>
+
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+        const supabase = createClient(
+            'https://wrajtiizvkvtzqmoicbm.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndyYWp0aWl6dmt2dHpxbW9pY2JtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyOTg4NTksImV4cCI6MjA5Mzg3NDg1OX0.pjbTkVx_KGs2ZDv_vQJOPc4ODgwi0q04qA5o2eMSqLA'
+        )
+
+        // ── Sessão ──────────────────────────────────────────────
+        const { data: { session } } = await supabase.auth.getSession()
+        if (!session) {
+            window.location.href = 'index.html'
+        } else {
+            const nome = session.user.user_metadata?.nome || session.user.email
+            document.getElementById('user-email').textContent = nome
+            document.getElementById('user-inicial').textContent = (nome || 'U')[0].toUpperCase()
+        }
+
+        // ── Loja selecionada ────────────────────────────────────
+        const lojaId = sessionStorage.getItem('loja_id')
+        const lojaNome = sessionStorage.getItem('loja_nome')
+
+        if (!lojaId) {
+            window.location.href = 'selecionar-loja.html'
+        }
+
+        // Mostra nome da loja no header
+        if (lojaNome) {
+            document.getElementById('loja-subtitulo').textContent = lojaNome + ' — Visão geral do estoque'
+        }
+
+        document.getElementById('btn-logout').addEventListener('click', async () => {
+            await supabase.auth.signOut()
+            sessionStorage.clear()
+            window.location.href = 'index.html'
+        })
+
+        // ── Carregar dados da loja selecionada ──────────────────
+        const seteAtras = new Date()
+        seteAtras.setDate(seteAtras.getDate() - 7)
+
+        const [resProdutos, resMov] = await Promise.all([
+            supabase.from('produtos').select('quantidade, preco_unitario, estoque_minimo').eq('loja_id', lojaId),
+            supabase.from('movimentacoes').select('tipo, quantidade, data').eq('loja_id', lojaId).gte('data', seteAtras.toISOString())
+        ])
+
+        const produtos = resProdutos.data || []
+        const movimentacoes = resMov.data || []
+
+        // ── Cards ───────────────────────────────────────────────
+        const totalProdutos = produtos.length
+        const estoqueTotal = produtos.reduce((s, p) => s + (p.quantidade || 0), 0)
+        const valorTotal = produtos.reduce((s, p) => s + ((p.preco_unitario || 0) * (p.quantidade || 0)), 0)
+        const totalAlertas = produtos.filter(p => p.quantidade < p.estoque_minimo).length
+
+        document.getElementById('total-produtos').textContent = totalProdutos
+        document.getElementById('estoque-total').textContent = estoqueTotal.toLocaleString('pt-BR')
+        document.getElementById('valor-total').textContent = valorTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+        document.getElementById('total-alertas').textContent = totalAlertas
+
+        // ── Movimentações 7 dias ────────────────────────────────
+        const totalEntradas = movimentacoes.filter(m => m.tipo === 'entrada').reduce((s, m) => s + m.quantidade, 0)
+        const totalSaidas = movimentacoes.filter(m => m.tipo === 'saida').reduce((s, m) => s + m.quantidade, 0)
+
+        document.getElementById('total-entradas').textContent = totalEntradas
+        document.getElementById('total-saidas').textContent = totalSaidas
+
+        // ── Gráfico ─────────────────────────────────────────────
+        // Monta labels dos últimos 7 dias
+        const labels = []
+        const entradasPorDia = []
+        const saidasPorDia = []
+
+        for (let i = 6; i >= 0; i--) {
+            const d = new Date()
+            d.setDate(d.getDate() - i)
+            const label = d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' })
+            labels.push(label)
+
+            const dStr = d.toISOString().split('T')[0]
+
+            const entradas = movimentacoes
+                .filter(m => m.tipo === 'entrada' && m.data.startsWith(dStr))
+                .reduce((s, m) => s + m.quantidade, 0)
+
+            const saidas = movimentacoes
+                .filter(m => m.tipo === 'saida' && m.data.startsWith(dStr))
+                .reduce((s, m) => s + m.quantidade, 0)
+
+            entradasPorDia.push(entradas)
+            saidasPorDia.push(saidas)
+        }
+
+        const ctx = document.getElementById('inventoryChart')
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [
+                    {
+                        label: 'Entradas',
+                        data: entradasPorDia,
+                        backgroundColor: 'rgba(22, 163, 74, 0.7)',
+                        borderColor: 'rgb(22, 163, 74)',
+                        borderRadius: 6
+                    },
+                    {
+                        label: 'Saídas',
+                        data: saidasPorDia,
+                        backgroundColor: 'rgba(220, 38, 38, 0.7)',
+                        borderColor: 'rgb(220, 38, 38)',
+                        borderRadius: 6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { precision: 0 }
+                    }
+                }
+            }
+        })
+
+    </script>
+
 </body>
 </html>
